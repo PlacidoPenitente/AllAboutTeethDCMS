@@ -4,6 +4,12 @@
     xmlns:local="clr-namespace:AllAboutTeethDCMS"
     StartupUri="MainWindow.xaml">
     <Application.Resources>
-        
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Dictionaries/Colors.xaml"/>
+                <ResourceDictionary Source="/Dictionaries/Images.xaml"/>
+                <ResourceDictionary Source="/Dictionaries/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
