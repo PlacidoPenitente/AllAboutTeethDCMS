@@ -30,13 +30,13 @@
 Imports System.Windows.Controls.Primitives
 
 
-Public Class CustomControl
+Public Class CustomTextbox
     Inherits System.Windows.Controls.Control
 
     Shared Sub New()
         'This OverrideMetadata call tells the system that this element wants to provide a style that is different than its base class.
         'This style is defined in themes\generic.xaml
-        DefaultStyleKeyProperty.OverrideMetadata(GetType(CustomControl), new FrameworkPropertyMetadata(GetType(CustomControl)))
+        DefaultStyleKeyProperty.OverrideMetadata(GetType(CustomTextbox), New FrameworkPropertyMetadata(GetType(CustomTextbox)))
     End Sub
 
 End Class

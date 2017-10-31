@@ -4,10 +4,10 @@
     xmlns:local="clr-namespace:AllAboutTeethDCMS">
 
 
-    <Style TargetType="{x:Type local:CustomControl}">
+    <Style TargetType="{x:Type local:CustomTextbox}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type local:CustomControl}">
+                <ControlTemplate TargetType="{x:Type local:CustomTextbox}">
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
