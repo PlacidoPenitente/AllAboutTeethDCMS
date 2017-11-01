@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="{StaticResource Blue}" RenderOptions.EdgeMode="Aliased">
+            <RadioButton Content="Home" Style="{StaticResource MenuButton}" IsChecked="True"/>
+            <RadioButton Content="Patients" Style="{StaticResource MenuButton}"/>
+            <RadioButton Content="Operations" Style="{StaticResource MenuButton}"/>
+            <RadioButton Content="Dentists" Style="{StaticResource MenuButton}"/>
+            <RadioButton Content="Inventory" Style="{StaticResource MenuButton}"/>
+            <RadioButton Content="Accounts" Style="{StaticResource MenuButton}"/>
+            <RadioButton Content="Help" Style="{StaticResource MenuButton}"/>
+        </StackPanel>
+        <Grid Grid.Row="1" Background="{StaticResource LighterBlue}">
+            <local:HomeRibbon/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Border Background="{StaticResource Blue}"/>
+        </Grid>
     </Grid>
 </Window>
