@@ -9,9 +9,9 @@
     <Grid>
         <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
             <StackPanel>
-                <Button Content="Add Patient To Queue" Margin="3"/>
-                <Button Content="Remove Patient From Queue" Margin="3"/>
-                <Button Content="Add Patient To Queue" Margin="3"/>
+                <Button local:ButtonProperties.Image="{StaticResource AddToQueue}" Content="Add Patient To Queue" Margin="3" Style="{StaticResource RibbonButton}"/>
+                <Button Content="Remove Patient From Queue" Margin="3" Style="{StaticResource RibbonButton}"/>
+                <Button Content="Add Patient To Queue" Margin="3" Style="{StaticResource RibbonButton}"/>
             </StackPanel>
         </StackPanel>
     </Grid>
