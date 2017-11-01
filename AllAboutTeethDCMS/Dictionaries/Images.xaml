@@ -13,4 +13,5 @@
     <ImageSource x:Key="Scheduled">/Resources/Images/Schedule_48px.png</ImageSource>
     <ImageSource x:Key="NewSchedule">/Resources/Images/Planner_48px.png</ImageSource>
     <ImageSource x:Key="Notification">/Resources/Images/Notification_48px.png</ImageSource>
+    <ImageSource x:Key="Menu">/Resources/Images/Menu_48px.png</ImageSource>
 </ResourceDictionary>

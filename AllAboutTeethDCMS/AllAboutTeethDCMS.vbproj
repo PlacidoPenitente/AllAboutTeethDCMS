@@ -77,7 +77,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Home\HomeRibbon.xaml">
+    <Page Include="Home\HomeContent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -90,8 +90,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AttachedProperties\ButtonProperties.vb" />
-    <Compile Include="Home\HomeRibbon.xaml.vb">
-      <DependentUpon>HomeRibbon.xaml</DependentUpon>
+    <Compile Include="Home\HomeContent.xaml.vb">
+      <DependentUpon>HomeContent.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.vb">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -170,6 +170,9 @@
     <Resource Include="Resources\Images\Notification_48px.png" />
     <Resource Include="Resources\Images\Planner_48px.png" />
     <Resource Include="Resources\Images\Schedule_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Menu_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
