@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="AccountsRibbon"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AllAboutTeethDCMS"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="800">
+    <Grid Background="{StaticResource DarkerBlue}">
+        <WrapPanel VerticalAlignment="Center" Orientation="Horizontal" RenderOptions.EdgeMode="Aliased" SnapsToDevicePixels="True">
+            <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
+                <StackPanel>
+                    <Button local:ButtonProperties.Image="{StaticResource AddToQueue}" Content="Register New Patient" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource RemoveFromQueue}" Content="Find Patient" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource ViewQueue}" Content="View Patients Record" Style="{StaticResource RibbonButton}"/>
+                </StackPanel>
+            </Border>
+            <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
+                <StackPanel>
+                    <Button local:ButtonProperties.Image="{StaticResource Start}" Content="Edit Patient" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource Cancel}" Content="Delete Patient" Style="{StaticResource RibbonButton}"/>
+                </StackPanel>
+            </Border>
+            <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
+                <StackPanel>
+                    <Button local:ButtonProperties.Image="{StaticResource View}" Content="Personal Information" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource Dentist}" Content="Operation History" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource ChangeDentist}" Content="Dental Chart" Style="{StaticResource RibbonButton}"/>
+                </StackPanel>
+            </Border>
+            <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
+                <StackPanel>
+                    <Button local:ButtonProperties.Image="{StaticResource Scheduled}" Content="Schedule Patient" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource NewSchedule}" Content="View Patient Schedule" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource Notification}" Content="Delete Patient Schedule" Style="{StaticResource RibbonButton}"/>
+                </StackPanel>
+            </Border>
+            <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
+                <StackPanel>
+                    <Button local:ButtonProperties.Image="{StaticResource Scheduled}" Content="Payment History" Style="{StaticResource RibbonButton}"/>
+                </StackPanel>
+            </Border>
+            <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
+                <StackPanel>
+                    <Button local:ButtonProperties.Image="{StaticResource Scheduled}" Content="Export To Excel File" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource NewSchedule}" Content="Export To PDF File" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource Notification}" Content="Export To Text File" Style="{StaticResource RibbonButton}"/>
+                </StackPanel>
+            </Border>
+        </WrapPanel>
+    </Grid>
+</UserControl>

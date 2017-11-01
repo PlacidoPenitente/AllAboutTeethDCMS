@@ -77,11 +77,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Home\HomeContent.xaml">
+    <Page Include="Ribbons\AccountsRibbon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Home\HomeRibbon.xaml">
+    <Page Include="Ribbons\HomeRibbon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -94,10 +94,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AttachedProperties\ButtonProperties.vb" />
-    <Compile Include="Home\HomeContent.xaml.vb">
-      <DependentUpon>HomeContent.xaml</DependentUpon>
+    <Compile Include="AttachedProperties\RibbonProperties.vb" />
+    <Compile Include="Ribbons\AccountsRibbon.xaml.vb">
+      <DependentUpon>AccountsRibbon.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Home\HomeRibbon.xaml.vb">
+    <Compile Include="Ribbons\HomeRibbon.xaml.vb">
       <DependentUpon>HomeRibbon.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.vb">

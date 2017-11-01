@@ -13,15 +13,23 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="{StaticResource LighterBlue}" RenderOptions.EdgeMode="Aliased">
-            <RadioButton Content="Home" Style="{StaticResource MenuButton}" IsChecked="True"/>
-            <RadioButton Content="Patients" Style="{StaticResource MenuButton}"/>
-            <RadioButton Content="Operations" Style="{StaticResource MenuButton}"/>
-            <RadioButton Content="Dentists" Style="{StaticResource MenuButton}"/>
-            <RadioButton Content="Inventory" Style="{StaticResource MenuButton}"/>
-            <RadioButton Content="Accounts" Style="{StaticResource MenuButton}"/>
-            <RadioButton Content="Help" Style="{StaticResource MenuButton}"/>
-        </StackPanel>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Horizontal" Background="{StaticResource LighterBlue}" RenderOptions.EdgeMode="Aliased">
+                <RadioButton Content="Home" Style="{StaticResource MenuButton}" IsChecked="True"/>
+                <RadioButton Content="Patients" Style="{StaticResource MenuButton}"/>
+                <RadioButton Content="Operations" Style="{StaticResource MenuButton}"/>
+                <RadioButton Content="Dentists" Style="{StaticResource MenuButton}"/>
+                <RadioButton Content="Inventory" Style="{StaticResource MenuButton}"/>
+                <RadioButton Content="Accounts" Style="{StaticResource MenuButton}"/>
+                <RadioButton Content="Settings" Style="{StaticResource MenuButton}"/>
+                <RadioButton Content="Help" Style="{StaticResource MenuButton}"/>
+            </StackPanel>
+            <Button Grid.Column="1" Content="Hide"/>
+        </Grid>
         <Grid Grid.Row="1" Background="{StaticResource LighterBlue}">
             <local:HomeRibbon/>
         </Grid>

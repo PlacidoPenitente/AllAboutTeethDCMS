@@ -31,8 +31,7 @@
             </Border>
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
                 <StackPanel>
-                    <Button local:ButtonProperties.Image="{StaticResource Scheduled}" Content="Scheduled Patient" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource NewSchedule}" Content="Schedule New Patient" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource Scheduled}" Content="Scheduled Patients" Style="{StaticResource RibbonButton}"/>
                     <Button local:ButtonProperties.Image="{StaticResource Notification}" Content="Notifications" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
