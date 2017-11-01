@@ -148,7 +148,28 @@
     <Folder Include="Pages\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Images\JoiningQueue_32px.png" />
+    <Resource Include="Resources\Images\JoiningQueue_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\LeavingQueue_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Queue_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Cancel_48px.png" />
+    <Resource Include="Resources\Images\Report Card_48px.png" />
+    <Resource Include="Resources\Images\Tooth_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Change User_48px.png" />
+    <Resource Include="Resources\Images\DoctorMale_48px.png" />
+    <Resource Include="Resources\Images\View_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Notification_48px.png" />
+    <Resource Include="Resources\Images\Planner_48px.png" />
+    <Resource Include="Resources\Images\Schedule_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

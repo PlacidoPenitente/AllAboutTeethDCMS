@@ -9,11 +9,11 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="{StaticResource Blue}" RenderOptions.EdgeMode="Aliased">
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="{StaticResource LighterBlue}" RenderOptions.EdgeMode="Aliased">
             <RadioButton Content="Home" Style="{StaticResource MenuButton}" IsChecked="True"/>
             <RadioButton Content="Patients" Style="{StaticResource MenuButton}"/>
             <RadioButton Content="Operations" Style="{StaticResource MenuButton}"/>

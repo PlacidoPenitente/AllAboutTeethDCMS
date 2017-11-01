@@ -5,4 +5,6 @@
     <SolidColorBrush x:Key="Blue">#1976D2</SolidColorBrush>
     <SolidColorBrush x:Key="LightBlue">#1E88E5</SolidColorBrush>
     <SolidColorBrush x:Key="LighterBlue">#2196F3</SolidColorBrush>
+    <SolidColorBrush x:Key="DarkBlue">#192E5B</SolidColorBrush>
+    <SolidColorBrush x:Key="DarkerBlue">#253f5b</SolidColorBrush>
 </ResourceDictionary>

@@ -6,7 +6,7 @@
         <Setter Property="FontFamily" Value="Century Gothic"/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="Foreground" Value="White"/>
-        <Setter Property="Background" Value="{StaticResource Blue}"/>
+        <Setter Property="Background" Value="{StaticResource LighterBlue}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
@@ -15,14 +15,14 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="{StaticResource LightBlue}"/>
+                            <Setter Property="Background" Value="{StaticResource Blue}"/>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" Value="{StaticResource LighterBlue}"/>
+                            <Setter Property="Background" Value="{StaticResource DarkerBlue}"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="{x:Null}">
                         </Trigger>
@@ -34,21 +34,36 @@
 
     <!--Ribbon Button-->
     <Style x:Key="RibbonButton" TargetType="{x:Type Button}">
+        <Setter Property="FontFamily" Value="Century Gothic"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Padding" Value="3"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border>
-                        <Grid VerticalAlignment="Center">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="32"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <Image Grid.Column="0" Source="{TemplateBinding local:ButtonProperties.Image}" Stretch="None"/>
-                            <ContentPresenter Grid.Column="1" Content="{TemplateBinding Content}"/>
-                        </Grid>
+                    <Border SnapsToDevicePixels="True" VerticalAlignment="Center" Background="{TemplateBinding Background}">
+                        <Border Margin="5">
+                            <Grid VerticalAlignment="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="24"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Image x:Name="icon" Grid.Column="0" Source="{TemplateBinding local:ButtonProperties.Image}" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality"/>
+                                <ContentPresenter VerticalAlignment="Center" Margin="5,0,0,0" Grid.Column="1" Content="{TemplateBinding Content}"/>
+                            </Grid>
+                        </Border>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource Blue}"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="{StaticResource LighterBlue}"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 </ResourceDictionary>

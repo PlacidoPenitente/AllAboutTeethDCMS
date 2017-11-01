@@ -1,5 +1,16 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:AllAboutTeethDCMS">
-    <ImageSource x:Key="AddToQueue">/Resources/Images/JoiningQueue_32px.png</ImageSource>
+    <ImageSource x:Key="AddToQueue">/Resources/Images/JoiningQueue_48px.png</ImageSource>
+    <ImageSource x:Key="RemoveFromQueue">/Resources/Images/LeavingQueue_48px.png</ImageSource>
+    <ImageSource x:Key="ViewQueue">/Resources/Images/Queue_48px.png</ImageSource>
+    <ImageSource x:Key="Start">/Resources/Images/Tooth_48px.png</ImageSource>
+    <ImageSource x:Key="Finish">/Resources/Images/Report Card_48px.png</ImageSource>
+    <ImageSource x:Key="Cancel">/Resources/Images/Cancel_48px.png</ImageSource>
+    <ImageSource x:Key="View">/Resources/Images/View_48px.png</ImageSource>
+    <ImageSource x:Key="Dentist">/Resources/Images/DoctorMale_48px.png</ImageSource>
+    <ImageSource x:Key="ChangeDentist">/Resources/Images/Change User_48px.png</ImageSource>
+    <ImageSource x:Key="Scheduled">/Resources/Images/Schedule_48px.png</ImageSource>
+    <ImageSource x:Key="NewSchedule">/Resources/Images/Planner_48px.png</ImageSource>
+    <ImageSource x:Key="Notification">/Resources/Images/Notification_48px.png</ImageSource>
 </ResourceDictionary>
