@@ -77,7 +77,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Ribbons\AccountsRibbon.xaml">
+    <Page Include="Ribbons\PatientsRibbon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -95,8 +95,8 @@
     </Compile>
     <Compile Include="AttachedProperties\ButtonProperties.vb" />
     <Compile Include="AttachedProperties\RibbonProperties.vb" />
-    <Compile Include="Ribbons\AccountsRibbon.xaml.vb">
-      <DependentUpon>AccountsRibbon.xaml</DependentUpon>
+    <Compile Include="Ribbons\PatientsRibbon.xaml.vb">
+      <DependentUpon>PatientsRibbon.xaml</DependentUpon>
     </Compile>
     <Compile Include="Ribbons\HomeRibbon.xaml.vb">
       <DependentUpon>HomeRibbon.xaml</DependentUpon>
@@ -181,6 +181,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Images\Menu_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\DownButton_48px.png" />
+    <Resource Include="Resources\Images\SlideUp_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

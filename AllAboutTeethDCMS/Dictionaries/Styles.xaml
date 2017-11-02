@@ -7,6 +7,7 @@
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="Background" Value="{StaticResource LighterBlue}"/>
+        <Setter Property="local:ButtonProperties.Visibility" Value="Collapsed"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
@@ -23,6 +24,7 @@
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
                             <Setter Property="Background" Value="{StaticResource DarkerBlue}"/>
+                            <Setter Property="local:ButtonProperties.Visibility" Value="Visible"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="{x:Null}">
                         </Trigger>
@@ -31,7 +33,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-
+    
     <!--Ribbon Button-->
     <Style x:Key="RibbonButton" TargetType="{x:Type Button}">
         <Setter Property="FontFamily" Value="Century Gothic"/>
@@ -65,5 +67,35 @@
                 <Setter Property="Background" Value="{StaticResource LighterBlue}"/>
             </Trigger>
         </Style.Triggers>
+    </Style>
+    
+    <!--Pin Button-->
+    <Style x:Key="PinStyle" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="local:ButtonProperties.Visibility" Value="Collapsed"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="border" Background="Transparent" SnapsToDevicePixels="True">
+                        <Image x:Name="pin" Source="{StaticResource ShowRibbon}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Button.IsDefaulted" Value="True">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="local:ButtonProperties.Visibility" Value="Visible"/>
+                            <Setter Property="Source" TargetName="pin" Value="{StaticResource HideRibbon}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 </ResourceDictionary>

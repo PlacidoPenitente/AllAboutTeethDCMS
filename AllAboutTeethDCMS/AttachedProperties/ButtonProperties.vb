@@ -11,14 +11,14 @@
         Return button.GetValue(ImageProperty)
     End Function
 
-    Public Shared ReadOnly SubImageProperty As DependencyProperty = DependencyProperty.RegisterAttached("SubImage", GetType(ImageSource), GetType(ButtonProperties), New PropertyMetadata(New ImageBrush().ImageSource))
+    Public Shared ReadOnly VisibilityProperty As DependencyProperty = DependencyProperty.RegisterAttached("Visibility", GetType(Visibility), GetType(ButtonProperties), New PropertyMetadata(Visibility.Visible))
 
-    Public Shared Sub SetSubImage(ByVal button As DependencyObject, ByVal value As ImageSource)
-        button.SetValue(SubImageProperty, value)
+    Public Shared Sub SetVisibility(ByVal ribbon As DependencyObject, ByVal value As Visibility)
+        ribbon.SetValue(VisibilityProperty, value)
     End Sub
 
-    Public Shared Function GetSubImage(ByVal button As DependencyObject) As ImageSource
-        Return button.GetValue(SubImageProperty)
+    Public Shared Function GetVisibility(ByVal ribbon As DependencyObject) As Visibility
+        Return ribbon.GetValue(VisibilityProperty)
     End Function
 
 End Class

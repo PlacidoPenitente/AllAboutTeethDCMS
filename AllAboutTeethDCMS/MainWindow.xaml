@@ -8,33 +8,38 @@
         Title="MainWindow" Height="600" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0" Background="{StaticResource LighterBlue}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Grid.Column="0" Orientation="Horizontal" Background="{StaticResource LighterBlue}" RenderOptions.EdgeMode="Aliased">
-                <RadioButton Content="Home" Style="{StaticResource MenuButton}" IsChecked="True"/>
-                <RadioButton Content="Patients" Style="{StaticResource MenuButton}"/>
-                <RadioButton Content="Operations" Style="{StaticResource MenuButton}"/>
-                <RadioButton Content="Dentists" Style="{StaticResource MenuButton}"/>
-                <RadioButton Content="Inventory" Style="{StaticResource MenuButton}"/>
-                <RadioButton Content="Accounts" Style="{StaticResource MenuButton}"/>
-                <RadioButton Content="Settings" Style="{StaticResource MenuButton}"/>
-                <RadioButton Content="Help" Style="{StaticResource MenuButton}"/>
-            </StackPanel>
-            <Button Grid.Column="1" Content="Hide"/>
+            <WrapPanel Grid.Column="0" Orientation="Horizontal" RenderOptions.EdgeMode="Aliased">
+                <RadioButton x:Name="home" Height="25" IsChecked="True" Content="Home" Style="{StaticResource MenuButton}"/>
+                <RadioButton x:Name="patients" Height="25" Content="Patients" Style="{StaticResource MenuButton}"/>
+                <RadioButton Content="Operations" Height="25" Style="{StaticResource MenuButton}"/>
+                <RadioButton Content="Dentists" Height="25" Style="{StaticResource MenuButton}"/>
+                <RadioButton Content="Inventory" Height="25" Style="{StaticResource MenuButton}"/>
+                <RadioButton Content="Accounts" Height="25" Style="{StaticResource MenuButton}"/>
+                <RadioButton Content="Settings" Height="25" Style="{StaticResource MenuButton}"/>
+                <RadioButton Content="Help" Height="25" Style="{StaticResource MenuButton}"/>
+            </WrapPanel>
+            <ToggleButton x:Name="pin" Height="25" IsChecked="True" Grid.Column="1" Style="{StaticResource PinStyle}"/>
         </Grid>
         <Grid Grid.Row="1" Background="{StaticResource LighterBlue}">
-            <local:HomeRibbon/>
+            <Grid Visibility="{Binding ElementName=pin, Path=(local:ButtonProperties.Visibility)}">
+                <local:HomeRibbon Visibility="{Binding ElementName=home, Path=(local:ButtonProperties.Visibility)}"/>
+                <local:PatientsRibbon Visibility="{Binding ElementName=patients, Path=(local:ButtonProperties.Visibility)}"/>
+            </Grid>
         </Grid>
         <Grid Grid.Row="3">
-            <Border Background="{StaticResource Blue}"/>
+            <Border Background="{StaticResource Blue}">
+                <Label Content="{Binding ElementName=pin, Path=(local:ButtonProperties.Visibility)}"/>
+            </Border>
         </Grid>
     </Grid>
 </Window>
