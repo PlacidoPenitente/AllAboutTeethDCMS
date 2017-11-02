@@ -21,6 +21,7 @@
                         <Trigger Property="IsEnabled" Value="False">
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{StaticResource DarkerBlue}"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
                             <Setter Property="Background" Value="{StaticResource DarkerBlue}"/>
@@ -84,8 +85,10 @@
                             <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource Blue}" TargetName="border"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{StaticResource DarkerBlue}" TargetName="border"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
                             <Setter Property="local:ButtonProperties.Visibility" Value="Visible"/>
@@ -99,6 +102,7 @@
         </Setter>
     </Style>
 
+    <!--User Button-->
     <Style x:Key="RibbonButtonAlternate" TargetType="{x:Type ToggleButton}">
         <Setter Property="Padding" Value="5,0,5,0"/>
         <Setter Property="local:ButtonProperties.Visibility" Value="Collapsed"/>
@@ -117,10 +121,15 @@
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 <Image x:Name="icon" Grid.Column="0" Source="{TemplateBinding local:ButtonProperties.Image}" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality"/>
-                                <ContentPresenter VerticalAlignment="Center" Margin="5,0,0,0" Grid.Column="1" Content="{TemplateBinding Content}"/>
+                                <ContentPresenter x:Name="content" Visibility="Collapsed" VerticalAlignment="Center" Margin="5,0,0,0" Grid.Column="1" Content="{TemplateBinding Content}"/>
                             </Grid>
                         </Border>
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Visibility" Value="Visible" TargetName="content"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -129,7 +138,7 @@
                 <Setter Property="Background" Value="{StaticResource Blue}"/>
             </Trigger>
             <Trigger Property="IsPressed" Value="True">
-                <Setter Property="Background" Value="{StaticResource LighterBlue}"/>
+                <Setter Property="Background" Value="{StaticResource DarkerBlue}"/>
             </Trigger>
             <Trigger Property="IsChecked" Value="True">
                 <Setter Property="local:ButtonProperties.Visibility" Value="Visible"/>

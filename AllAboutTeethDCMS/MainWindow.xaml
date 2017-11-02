@@ -29,8 +29,8 @@
                 <RadioButton Content="Settings" Height="25" Style="{StaticResource MenuButton}"/>
                 <RadioButton Content="Help" Height="25" Style="{StaticResource MenuButton}"/>
             </WrapPanel>
-            <ToggleButton x:Name="user" VerticalAlignment="Bottom" local:ButtonProperties.Image="{StaticResource User}" Grid.Column="1" Content="Jay Mark Estrera" Style="{StaticResource RibbonButtonAlternate}"/>
-            <ToggleButton VerticalAlignment="Bottom" x:Name="pin" Height="25" IsChecked="True" Grid.Column="2" Style="{StaticResource Pin}"/>
+            <ToggleButton VerticalAlignment="Bottom" x:Name="pin" Height="25" IsChecked="True" Grid.Column="1" Style="{StaticResource Pin}"/>
+            <ToggleButton x:Name="user" VerticalAlignment="Bottom" local:ButtonProperties.Image="{StaticResource User}" Grid.Column="2" Content="Jay Mark Estrera" Style="{StaticResource RibbonButtonAlternate}"/>
         </Grid>
         <Grid Grid.Row="1" Background="{StaticResource LighterBlue}">
             <Grid Visibility="{Binding ElementName=pin, Path=(local:ButtonProperties.Visibility)}" Background="{StaticResource DarkerBlue}">
@@ -42,9 +42,9 @@
                 <local:PatientsRibbon Visibility="{Binding ElementName=patients, Path=(local:ButtonProperties.Visibility)}"/>
                 <Border Visibility="{Binding ElementName=user, Path=(local:ButtonProperties.Visibility)}" Margin="2" Height="Auto" VerticalAlignment="Top" BorderThickness="1" Grid.Column="1" BorderBrush="{StaticResource Blue}">
                     <StackPanel>
-                        <Button local:ButtonProperties.Image="{StaticResource AddToQueue}" Content="Add Patient To Queue" Style="{StaticResource RibbonButton}"/>
-                        <Button local:ButtonProperties.Image="{StaticResource RemoveFromQueue}" Content="Remove Patient From Queue" Style="{StaticResource RibbonButton}"/>
-                        <Button local:ButtonProperties.Image="{StaticResource ViewQueue}" Content="View Patient Queue" Style="{StaticResource RibbonButton}"/>
+                        <Button local:ButtonProperties.Image="{StaticResource RemoveFromQueue}" Content="Account Settings" Style="{StaticResource RibbonButton}"/>
+                        <Button local:ButtonProperties.Image="{StaticResource ViewQueue}" Content="Change Password" Style="{StaticResource RibbonButton}"/>
+                        <Button local:ButtonProperties.Image="{StaticResource ViewQueue}" Content="Log Out" Style="{StaticResource RibbonButton}"/>
                     </StackPanel>
                 </Border>
             </Grid>
