@@ -17,6 +17,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <WrapPanel Grid.Column="0" Orientation="Horizontal" RenderOptions.EdgeMode="Aliased">
                 <RadioButton x:Name="home" Height="25" IsChecked="True" Content="Home" Style="{StaticResource MenuButton}"/>
@@ -28,18 +29,32 @@
                 <RadioButton Content="Settings" Height="25" Style="{StaticResource MenuButton}"/>
                 <RadioButton Content="Help" Height="25" Style="{StaticResource MenuButton}"/>
             </WrapPanel>
-            <ToggleButton x:Name="pin" Height="25" IsChecked="True" Grid.Column="1" Style="{StaticResource PinStyle}"/>
+            <ToggleButton x:Name="user" VerticalAlignment="Bottom" local:ButtonProperties.Image="{StaticResource User}" Grid.Column="1" Content="Jay Mark Estrera" Style="{StaticResource RibbonButtonAlternate}"/>
+            <ToggleButton VerticalAlignment="Bottom" x:Name="pin" Height="25" IsChecked="True" Grid.Column="2" Style="{StaticResource Pin}"/>
         </Grid>
         <Grid Grid.Row="1" Background="{StaticResource LighterBlue}">
-            <Grid Visibility="{Binding ElementName=pin, Path=(local:ButtonProperties.Visibility)}">
+            <Grid Visibility="{Binding ElementName=pin, Path=(local:ButtonProperties.Visibility)}" Background="{StaticResource DarkerBlue}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
                 <local:HomeRibbon Visibility="{Binding ElementName=home, Path=(local:ButtonProperties.Visibility)}"/>
                 <local:PatientsRibbon Visibility="{Binding ElementName=patients, Path=(local:ButtonProperties.Visibility)}"/>
+                <Border Visibility="{Binding ElementName=user, Path=(local:ButtonProperties.Visibility)}" Margin="2" Height="Auto" VerticalAlignment="Top" BorderThickness="1" Grid.Column="1" BorderBrush="{StaticResource Blue}">
+                    <StackPanel>
+                        <Button local:ButtonProperties.Image="{StaticResource AddToQueue}" Content="Add Patient To Queue" Style="{StaticResource RibbonButton}"/>
+                        <Button local:ButtonProperties.Image="{StaticResource RemoveFromQueue}" Content="Remove Patient From Queue" Style="{StaticResource RibbonButton}"/>
+                        <Button local:ButtonProperties.Image="{StaticResource ViewQueue}" Content="View Patient Queue" Style="{StaticResource RibbonButton}"/>
+                    </StackPanel>
+                </Border>
             </Grid>
         </Grid>
-        <Grid Grid.Row="3">
-            <Border Background="{StaticResource Blue}">
-                <Label Content="{Binding ElementName=pin, Path=(local:ButtonProperties.Visibility)}"/>
-            </Border>
+        <Grid Grid.Row="3" Background="{StaticResource Blue}">
+            <StackPanel Orientation="Horizontal">
+                <Label VerticalContentAlignment="Center" FontFamily="Century Gothic" Foreground="White" Content="{Binding ElementName=pin, Path=(local:ButtonProperties.Visibility)}"/>
+                <Border Width="2" Background="{StaticResource LightBlue}" RenderOptions.EdgeMode="Aliased"/>
+                <Label VerticalContentAlignment="Center" FontFamily="Century Gothic" Foreground="White" Content="Connected"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>

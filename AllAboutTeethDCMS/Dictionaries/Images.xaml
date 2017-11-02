@@ -16,5 +16,5 @@
     <ImageSource x:Key="Menu">/Resources/Images/Menu_48px.png</ImageSource>
     <ImageSource x:Key="ShowRibbon">/Resources/Images/DownButton_48px.png</ImageSource>
     <ImageSource x:Key="HideRibbon">/Resources/Images/SlideUp_48px.png</ImageSource>
-    
+    <ImageSource x:Key="User">/Resources/Images/MaleUser_48px.png</ImageSource>
 </ResourceDictionary>

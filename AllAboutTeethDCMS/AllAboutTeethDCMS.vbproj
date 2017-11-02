@@ -186,5 +186,8 @@
     <Resource Include="Resources\Images\DownButton_48px.png" />
     <Resource Include="Resources\Images\SlideUp_48px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\MaleUser_48px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -40,12 +40,12 @@
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Padding" Value="3"/>
+        <Setter Property="Padding" Value="5"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border SnapsToDevicePixels="True" VerticalAlignment="Center" Background="{TemplateBinding Background}">
-                        <Border Margin="5">
+                    <Border Padding="{TemplateBinding Padding}" SnapsToDevicePixels="True" VerticalAlignment="Center" Background="{TemplateBinding Background}">
+                        <Border>
                             <Grid VerticalAlignment="Center">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="24"/>
@@ -70,7 +70,7 @@
     </Style>
     
     <!--Pin Button-->
-    <Style x:Key="PinStyle" TargetType="{x:Type ToggleButton}">
+    <Style x:Key="Pin" TargetType="{x:Type ToggleButton}">
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="local:ButtonProperties.Visibility" Value="Collapsed"/>
         <Setter Property="Template">
@@ -97,5 +97,44 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+
+    <Style x:Key="RibbonButtonAlternate" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Padding" Value="5,0,5,0"/>
+        <Setter Property="local:ButtonProperties.Visibility" Value="Collapsed"/>
+        <Setter Property="FontFamily" Value="Century Gothic"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border Padding="{TemplateBinding Padding}" SnapsToDevicePixels="True" VerticalAlignment="Center" Background="{TemplateBinding Background}">
+                        <Border>
+                            <Grid VerticalAlignment="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="24"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Image x:Name="icon" Grid.Column="0" Source="{TemplateBinding local:ButtonProperties.Image}" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality"/>
+                                <ContentPresenter VerticalAlignment="Center" Margin="5,0,0,0" Grid.Column="1" Content="{TemplateBinding Content}"/>
+                            </Grid>
+                        </Border>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource Blue}"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="{StaticResource LighterBlue}"/>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="local:ButtonProperties.Visibility" Value="Visible"/>
+                <Setter Property="Background" Value="{StaticResource DarkerBlue}"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 </ResourceDictionary>
