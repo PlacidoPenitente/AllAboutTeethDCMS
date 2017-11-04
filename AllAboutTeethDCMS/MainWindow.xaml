@@ -25,12 +25,12 @@
                 <RadioButton Content="Operations" Height="25" Style="{StaticResource MenuButton}"/>
                 <RadioButton Content="Dentists" Height="25" Style="{StaticResource MenuButton}"/>
                 <RadioButton Content="Inventory" Height="25" Style="{StaticResource MenuButton}"/>
-                <RadioButton Content="Accounts" Height="25" Style="{StaticResource MenuButton}"/>
+                <RadioButton x:Name="accounts" Content="Accounts" Height="25" Style="{StaticResource MenuButton}"/>
                 <RadioButton Content="Settings" Height="25" Style="{StaticResource MenuButton}"/>
                 <RadioButton Content="Help" Height="25" Style="{StaticResource MenuButton}"/>
             </WrapPanel>
             <ToggleButton VerticalAlignment="Bottom" x:Name="pin" Height="25" IsChecked="True" Grid.Column="1" Style="{StaticResource Pin}"/>
-            <ToggleButton x:Name="user" VerticalAlignment="Bottom" local:ButtonProperties.Image="{StaticResource User}" Grid.Column="2" Content="Jay Mark Estrera" Style="{StaticResource RibbonButtonAlternate}"/>
+            <ToggleButton x:Name="user" Height="25" VerticalAlignment="Bottom" local:ButtonProperties.Image="{StaticResource User}" Grid.Column="2" Content="Jay Mark Estrera" Style="{StaticResource RibbonButtonAlternate}"/>
         </Grid>
         <Grid Grid.Row="1" Background="{StaticResource LighterBlue}">
             <Grid Visibility="{Binding ElementName=pin, Path=(local:ButtonProperties.Visibility)}" Background="{StaticResource DarkerBlue}">
@@ -40,6 +40,7 @@
                 </Grid.ColumnDefinitions>
                 <local:HomeRibbon Visibility="{Binding ElementName=home, Path=(local:ButtonProperties.Visibility)}"/>
                 <local:PatientsRibbon Visibility="{Binding ElementName=patients, Path=(local:ButtonProperties.Visibility)}"/>
+                <local:AccountsRibbon Visibility="{Binding ElementName=accounts, Path=(local:ButtonProperties.Visibility)}"/>
                 <Border Visibility="{Binding ElementName=user, Path=(local:ButtonProperties.Visibility)}" Margin="2" Height="Auto" VerticalAlignment="Top" BorderThickness="1" Grid.Column="1" BorderBrush="{StaticResource Blue}">
                     <StackPanel>
                         <Button local:ButtonProperties.Image="{StaticResource RemoveFromQueue}" Content="Account Settings" Style="{StaticResource RibbonButton}"/>

@@ -65,6 +65,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Ribbons\HelpRibbon.xaml.vb">
+      <DependentUpon>HelpRibbon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ribbons\SettingsRibbon.xaml.vb">
+      <DependentUpon>SettingsRibbon.xaml</DependentUpon>
+    </Compile>
     <Page Include="Dictionaries\Colors.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -74,6 +80,26 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dictionaries\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ribbons\AccountsRibbon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ribbons\DentistsRibbon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ribbons\HelpRibbon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ribbons\InventoryRibbon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ribbons\OperationsRibbon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -95,6 +121,18 @@
     </Compile>
     <Compile Include="AttachedProperties\ButtonProperties.vb" />
     <Compile Include="AttachedProperties\RibbonProperties.vb" />
+    <Compile Include="Ribbons\AccountsRibbon.xaml.vb">
+      <DependentUpon>AccountsRibbon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ribbons\DentistsRibbon.xaml.vb">
+      <DependentUpon>DentistsRibbon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ribbons\InventoryRibbon.xaml.vb">
+      <DependentUpon>InventoryRibbon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ribbons\OperationsRibbon.xaml.vb">
+      <DependentUpon>OperationsRibbon.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Ribbons\PatientsRibbon.xaml.vb">
       <DependentUpon>PatientsRibbon.xaml</DependentUpon>
     </Compile>
@@ -105,6 +143,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Ribbons\SettingsRibbon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Import Include="System.Linq" />

@@ -113,7 +113,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
-                    <Border Padding="{TemplateBinding Padding}" SnapsToDevicePixels="True" VerticalAlignment="Center" Background="{TemplateBinding Background}">
+                    <Border Padding="{TemplateBinding Padding}" SnapsToDevicePixels="True" VerticalAlignment="Center" Height="{TemplateBinding Height}" Background="{TemplateBinding Background}">
                         <Border>
                             <Grid VerticalAlignment="Center">
                                 <Grid.ColumnDefinitions>
