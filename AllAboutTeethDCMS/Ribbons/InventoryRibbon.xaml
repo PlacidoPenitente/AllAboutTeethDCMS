@@ -10,15 +10,34 @@
         <WrapPanel VerticalAlignment="Center" Orientation="Horizontal" RenderOptions.EdgeMode="Aliased" SnapsToDevicePixels="True">
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
                 <StackPanel>
-                    <Button local:ButtonProperties.Image="{StaticResource AddToQueue}" Content="Add New Account" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource RemoveFromQueue}" Content="Find Account" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource ViewQueue}" Content="View Accounts" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource Add}" Content="Add Item" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource Find}" Content="Find Item" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource Items}" Content="Show Items" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
                 <StackPanel>
-                    <Button local:ButtonProperties.Image="{StaticResource Start}" Content="Edit Account" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource Cancel}" Content="Delete Account" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource Edit}" Content="Edit Item" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource Delete}" Content="Delete Item" Style="{StaticResource RibbonButton}"/>
+                </StackPanel>
+            </Border>
+            <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
+                <StackPanel>
+                    <Button local:ButtonProperties.Image="{StaticResource UpdateStocks}" Content="Update Stocks" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource Critical}" Content="Critical Items" Style="{StaticResource RibbonButton}"/>
+                </StackPanel>
+            </Border>
+            <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
+                <StackPanel>
+                    <Button local:ButtonProperties.Image="{StaticResource FilterResults}" Content="Filter Results" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource ClearFilter}" Content="Clear Filter" Style="{StaticResource RibbonButton}"/>
+                </StackPanel>
+            </Border>
+            <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
+                <StackPanel>
+                    <Button local:ButtonProperties.Image="{StaticResource Excel}" Content="Export To Excel File" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource PDF}" Content="Export To PDF File" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource Text}" Content="Export To Text File" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
         </WrapPanel>

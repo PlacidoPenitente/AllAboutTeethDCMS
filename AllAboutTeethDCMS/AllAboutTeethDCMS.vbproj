@@ -273,5 +273,18 @@
   <ItemGroup>
     <Resource Include="Resources\Images\Coins_48px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Edit_48px.png" />
+    <Resource Include="Resources\Images\Minus_48px.png" />
+    <Resource Include="Resources\Images\Plus_48px.png" />
+    <Resource Include="Resources\Images\PollTopic_48px.png" />
+    <Resource Include="Resources\Images\Search_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\OpenBox_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\HighPriority_48px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -41,4 +41,11 @@
     <ImageSource x:Key="Schedule">/Resources/Images/Calendar_48px.png</ImageSource>
     <ImageSource x:Key="ViewDentistsList">/Resources/Images/List_48px.png</ImageSource>
     <ImageSource x:Key="Transaction">/Resources/Images/Coins_48px.png</ImageSource>
+    <ImageSource x:Key="Add">/Resources/Images/Plus_48px.png</ImageSource>
+    <ImageSource x:Key="Edit">/Resources/Images/Edit_48px.png</ImageSource>
+    <ImageSource x:Key="Delete">/Resources/Images/Minus_48px.png</ImageSource>
+    <ImageSource x:Key="Find">/Resources/Images/Search_48px.png</ImageSource>
+    <ImageSource x:Key="Items">/Resources/Images/OpenBox_48px.png</ImageSource>
+    <ImageSource x:Key="Critical">/Resources/Images/HighPriority_48px.png</ImageSource>
+    <ImageSource x:Key="UpdateStocks">/Resources/Images/PollTopic_48px.png</ImageSource>
 </ResourceDictionary>
