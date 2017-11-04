@@ -49,4 +49,10 @@
     <ImageSource x:Key="Critical">/Resources/Images/HighPriority_48px.png</ImageSource>
     <ImageSource x:Key="UpdateStocks">/Resources/Images/PollTopic_48px.png</ImageSource>
     <ImageSource x:Key="ViewAccounts">/Resources/Images/UserGroups_48px.png</ImageSource>
+    <ImageSource x:Key="System">/Resources/Images/HorizontalSettingsMixer_48px.png</ImageSource>
+    <ImageSource x:Key="Server">/Resources/Images/Server_48px.png</ImageSource>
+    <ImageSource x:Key="Database">/Resources/Images/DatabaseAdministrator_48px.png</ImageSource>
+    <ImageSource x:Key="Tutorial">/Resources/Images/Classroom_48px.png</ImageSource>
+    <ImageSource x:Key="Keyboard">/Resources/Images/Keyboard_48px.png</ImageSource>
+    <ImageSource x:Key="About">/Resources/Images/Info_48px.png</ImageSource>
 </ResourceDictionary>

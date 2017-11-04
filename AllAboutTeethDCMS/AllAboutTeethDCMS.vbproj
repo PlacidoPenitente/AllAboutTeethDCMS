@@ -289,5 +289,13 @@
   <ItemGroup>
     <Resource Include="Resources\Images\UserGroups_48px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Classroom_48px.png" />
+    <Resource Include="Resources\Images\DatabaseAdministrator_48px.png" />
+    <Resource Include="Resources\Images\HorizontalSettingsMixer_48px.png" />
+    <Resource Include="Resources\Images\Info_48px.png" />
+    <Resource Include="Resources\Images\Keyboard_48px.png" />
+    <Resource Include="Resources\Images\Server_48px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

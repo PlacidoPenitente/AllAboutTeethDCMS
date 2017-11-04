@@ -7,18 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="800">
     <Grid Background="{StaticResource DarkerBlue}">
-        <WrapPanel VerticalAlignment="Center" Orientation="Horizontal" RenderOptions.EdgeMode="Aliased" SnapsToDevicePixels="True">
+        <WrapPanel VerticalAlignment="Top" Orientation="Horizontal" RenderOptions.EdgeMode="Aliased" SnapsToDevicePixels="True">
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
                 <StackPanel>
-                    <Button local:ButtonProperties.Image="{StaticResource AddToQueue}" Content="Add New Account" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource RemoveFromQueue}" Content="Find Account" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource ViewQueue}" Content="View Accounts" Style="{StaticResource RibbonButton}"/>
-                </StackPanel>
-            </Border>
-            <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
-                <StackPanel>
-                    <Button local:ButtonProperties.Image="{StaticResource Start}" Content="Edit Account" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource Cancel}" Content="Delete Account" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource Tutorial}" Content="Tutorials" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource Keyboard}" Content="Keyboard Shortcuts" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource About}" Content="About" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
         </WrapPanel>
