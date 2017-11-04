@@ -231,5 +231,23 @@
   <ItemGroup>
     <Resource Include="Resources\Images\MaleUser_48px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\AddUserMale_48px.png" />
+    <Resource Include="Resources\Images\CashinHand_48px.png" />
+    <Resource Include="Resources\Images\FalseTeeth_48px.png" />
+    <Resource Include="Resources\Images\FindUserMale_48px.png" />
+    <Resource Include="Resources\Images\MicrosoftExcel_48px.png" />
+    <Resource Include="Resources\Images\PDF_48px.png" />
+    <Resource Include="Resources\Images\Pliers_48px.png" />
+    <Resource Include="Resources\Images\Registration_48px.png" />
+    <Resource Include="Resources\Images\RemoveUserMale_48px.png" />
+    <Resource Include="Resources\Images\Resume_48px.png" />
+    <Resource Include="Resources\Images\TXT_48px.png" />
+    <Resource Include="Resources\Images\User_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\CalendarMinus_48px.png" />
+    <Resource Include="Resources\Images\CalendarPlus_48px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
