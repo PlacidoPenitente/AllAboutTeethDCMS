@@ -48,4 +48,5 @@
     <ImageSource x:Key="Items">/Resources/Images/OpenBox_48px.png</ImageSource>
     <ImageSource x:Key="Critical">/Resources/Images/HighPriority_48px.png</ImageSource>
     <ImageSource x:Key="UpdateStocks">/Resources/Images/PollTopic_48px.png</ImageSource>
+    <ImageSource x:Key="ViewAccounts">/Resources/Images/UserGroups_48px.png</ImageSource>
 </ResourceDictionary>
