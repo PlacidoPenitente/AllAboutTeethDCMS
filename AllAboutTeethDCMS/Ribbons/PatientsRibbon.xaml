@@ -12,7 +12,7 @@
                 <StackPanel>
                     <Button local:ButtonProperties.Image="{StaticResource AddPatient}" Content="Register New Patient" Style="{StaticResource RibbonButton}"/>
                     <Button local:ButtonProperties.Image="{StaticResource FindPatient}" Content="Find Patient" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource ViewPatient}" Content="View Patients Record" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource ViewPatientsRecord}" Content="View Patients Record" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
@@ -24,7 +24,7 @@
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
                 <StackPanel>
                     <Button local:ButtonProperties.Image="{StaticResource PatientInformation}" Content="Personal Information" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource OperationHistory}" Content="Operation History" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource OperationHistory}" Content="Operations History" Style="{StaticResource RibbonButton}"/>
                     <Button local:ButtonProperties.Image="{StaticResource DentalChart}" Content="Dental Chart" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
@@ -38,6 +38,12 @@
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
                 <StackPanel>
                     <Button local:ButtonProperties.Image="{StaticResource Payment}" Content="Payment History" Style="{StaticResource RibbonButton}"/>
+                </StackPanel>
+            </Border>
+            <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
+                <StackPanel>
+                    <Button local:ButtonProperties.Image="{StaticResource FilterResults}" Content="Filter Results" Style="{StaticResource RibbonButton}"/>
+                    <Button local:ButtonProperties.Image="{StaticResource ClearFilter}" Content="Clear Filter" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">

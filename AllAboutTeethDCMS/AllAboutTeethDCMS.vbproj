@@ -243,11 +243,35 @@
     <Resource Include="Resources\Images\RemoveUserMale_48px.png" />
     <Resource Include="Resources\Images\Resume_48px.png" />
     <Resource Include="Resources\Images\TXT_48px.png" />
-    <Resource Include="Resources\Images\User_48px.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Images\CalendarMinus_48px.png" />
     <Resource Include="Resources\Images\CalendarPlus_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\DeleteDocument_48px.png" />
+    <Resource Include="Resources\Images\SearchProperty_48px.png" />
+    <Resource Include="Resources\Images\ShowProperty_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\ClearFilters_48px.png" />
+    <Resource Include="Resources\Images\Filter_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\AddProperty_48px.png" />
+    <Resource Include="Resources\Images\EditProperty_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Calendar_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Literature_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\List_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Coins_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
