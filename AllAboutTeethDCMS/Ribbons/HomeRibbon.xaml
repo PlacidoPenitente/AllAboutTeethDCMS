@@ -10,29 +10,29 @@
         <WrapPanel VerticalAlignment="Center" Orientation="Horizontal" RenderOptions.EdgeMode="Aliased" SnapsToDevicePixels="True">
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
                 <StackPanel>
-                    <Button local:ButtonProperties.Image="{StaticResource AddToQueue}" Content="Add Patient To Queue" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource RemoveFromQueue}" Content="Remove Patient From Queue" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource ViewQueue}" Content="View Patient Queue" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource AddToQueue}" Content="Add Patient To Queue" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource RemoveFromQueue}" Content="Remove Patient From Queue" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource ViewQueue}" Content="View Patient Queue" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
                 <StackPanel>
-                    <Button local:ButtonProperties.Image="{StaticResource Start}" Content="Start Operation" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource Finish}" Content="Finish Operation" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource Cancel}" Content="Cancel Operation" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource Start}" Content="Start Operation" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource Finish}" Content="Finish Operation" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource Cancel}" Content="Cancel Operation" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
                 <StackPanel>
-                    <Button local:ButtonProperties.Image="{StaticResource View}" Content="View Patient" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource Dentist}" Content="Assign Dentist" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource ChangeDentist}" Content="Change Dentist" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource View}" Content="View Patient" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource Dentist}" Content="Assign Dentist" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource ChangeDentist}" Content="Change Dentist" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
                 <StackPanel>
-                    <Button local:ButtonProperties.Image="{StaticResource Scheduled}" Content="Scheduled Patients" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource Notification}" Content="Notifications" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource Scheduled}" Content="Scheduled Patients" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource Notification}" Content="Notifications" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
         </WrapPanel>

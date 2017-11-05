@@ -1,7 +1,7 @@
-﻿Public Class ButtonProperties
+﻿Public Class CustomProperties
     Inherits DependencyObject
 
-    Public Shared ReadOnly ImageProperty As DependencyProperty = DependencyProperty.RegisterAttached("Image", GetType(ImageSource), GetType(ButtonProperties), New PropertyMetadata(New ImageBrush().ImageSource))
+    Public Shared ReadOnly ImageProperty As DependencyProperty = DependencyProperty.RegisterAttached("Image", GetType(ImageSource), GetType(CustomProperties), New PropertyMetadata(New ImageBrush().ImageSource))
 
     Public Shared Sub SetImage(ByVal button As DependencyObject, ByVal value As ImageSource)
         button.SetValue(ImageProperty, value)
@@ -11,7 +11,7 @@
         Return button.GetValue(ImageProperty)
     End Function
 
-    Public Shared ReadOnly VisibilityProperty As DependencyProperty = DependencyProperty.RegisterAttached("Visibility", GetType(Visibility), GetType(ButtonProperties), New PropertyMetadata(Visibility.Visible))
+    Public Shared ReadOnly VisibilityProperty As DependencyProperty = DependencyProperty.RegisterAttached("Visibility", GetType(Visibility), GetType(CustomProperties), New PropertyMetadata(Visibility.Visible))
 
     Public Shared Sub SetVisibility(ByVal ribbon As DependencyObject, ByVal value As Visibility)
         ribbon.SetValue(VisibilityProperty, value)

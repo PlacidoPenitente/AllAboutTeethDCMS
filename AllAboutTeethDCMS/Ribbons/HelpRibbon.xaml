@@ -10,9 +10,9 @@
         <WrapPanel VerticalAlignment="Top" Orientation="Horizontal" RenderOptions.EdgeMode="Aliased" SnapsToDevicePixels="True">
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
                 <StackPanel>
-                    <Button local:ButtonProperties.Image="{StaticResource Tutorial}" Content="Tutorials" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource Keyboard}" Content="Keyboard Shortcuts" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource About}" Content="About" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource Tutorial}" Content="Tutorials" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource Keyboard}" Content="Keyboard Shortcuts" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource About}" Content="About" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
         </WrapPanel>

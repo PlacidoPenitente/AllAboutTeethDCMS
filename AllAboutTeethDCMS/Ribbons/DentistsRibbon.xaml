@@ -10,40 +10,40 @@
         <WrapPanel VerticalAlignment="Center" Orientation="Horizontal" RenderOptions.EdgeMode="Aliased" SnapsToDevicePixels="True">
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
                 <StackPanel>
-                    <Button local:ButtonProperties.Image="{StaticResource AddPatient}" Content="Register New Dentist" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource FindPatient}" Content="Find Dentist" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource ViewDentistsList}" Content="View Dentists List" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource AddPatient}" Content="Register New Dentist" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource FindPatient}" Content="Find Dentist" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource ViewDentistsList}" Content="View Dentists List" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
                 <StackPanel>
-                    <Button local:ButtonProperties.Image="{StaticResource EditPatient}" Content="Edit Dentist" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource DeletePatient}" Content="Delete Dentist" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource EditPatient}" Content="Edit Dentist" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource DeletePatient}" Content="Delete Dentist" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
                 <StackPanel>
-                    <Button local:ButtonProperties.Image="{StaticResource PatientInformation}" Content="Personal Information" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource OperationHistory}" Content="Operations History" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource Scheduled}" Content="Dentist Schedule" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource PatientInformation}" Content="Personal Information" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource OperationHistory}" Content="Operations History" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource Scheduled}" Content="Dentist Schedule" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
                 <StackPanel>
-                    <Button local:ButtonProperties.Image="{StaticResource Transaction}" Content="Transactions History" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource Transaction}" Content="Transactions History" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
                 <StackPanel>
-                    <Button local:ButtonProperties.Image="{StaticResource FilterResults}" Content="Filter Results" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource ClearFilter}" Content="Clear Filter" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource FilterResults}" Content="Filter Results" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource ClearFilter}" Content="Clear Filter" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
                 <StackPanel>
-                    <Button local:ButtonProperties.Image="{StaticResource Excel}" Content="Export To Excel File" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource PDF}" Content="Export To PDF File" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource Text}" Content="Export To Text File" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource Excel}" Content="Export To Excel File" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource PDF}" Content="Export To PDF File" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource Text}" Content="Export To Text File" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
         </WrapPanel>

@@ -7,7 +7,7 @@
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="Background" Value="{StaticResource LighterBlue}"/>
-        <Setter Property="local:ButtonProperties.Visibility" Value="Collapsed"/>
+        <Setter Property="local:CustomProperties.Visibility" Value="Collapsed"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
@@ -25,7 +25,7 @@
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
                             <Setter Property="Background" Value="{StaticResource DarkerBlue}"/>
-                            <Setter Property="local:ButtonProperties.Visibility" Value="Visible"/>
+                            <Setter Property="local:CustomProperties.Visibility" Value="Visible"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="{x:Null}">
                         </Trigger>
@@ -52,7 +52,7 @@
                                     <ColumnDefinition Width="24"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <Image x:Name="icon" Grid.Column="0" Source="{TemplateBinding local:ButtonProperties.Image}" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality"/>
+                                <Image x:Name="icon" Grid.Column="0" Source="{TemplateBinding local:CustomProperties.Image}" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality"/>
                                 <ContentPresenter VerticalAlignment="Center" Margin="5,0,0,0" Grid.Column="1" Content="{TemplateBinding Content}"/>
                             </Grid>
                         </Border>
@@ -73,7 +73,7 @@
     <!--Pin Button-->
     <Style x:Key="Pin" TargetType="{x:Type ToggleButton}">
         <Setter Property="Cursor" Value="Hand"/>
-        <Setter Property="local:ButtonProperties.Visibility" Value="Collapsed"/>
+        <Setter Property="local:CustomProperties.Visibility" Value="Collapsed"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
@@ -91,7 +91,7 @@
                             <Setter Property="Background" Value="{StaticResource DarkerBlue}" TargetName="border"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="local:ButtonProperties.Visibility" Value="Visible"/>
+                            <Setter Property="local:CustomProperties.Visibility" Value="Visible"/>
                             <Setter Property="Source" TargetName="pin" Value="{StaticResource HideRibbon}"/>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
@@ -105,7 +105,7 @@
     <!--User Button-->
     <Style x:Key="RibbonButtonAlternate" TargetType="{x:Type ToggleButton}">
         <Setter Property="Padding" Value="5,0,5,0"/>
-        <Setter Property="local:ButtonProperties.Visibility" Value="Collapsed"/>
+        <Setter Property="local:CustomProperties.Visibility" Value="Collapsed"/>
         <Setter Property="FontFamily" Value="Century Gothic"/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="Foreground" Value="White"/>
@@ -120,7 +120,7 @@
                                     <ColumnDefinition Width="24"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <Image x:Name="icon" Grid.Column="0" Source="{TemplateBinding local:ButtonProperties.Image}" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality"/>
+                                <Image x:Name="icon" Grid.Column="0" Source="{TemplateBinding local:CustomProperties.Image}" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality"/>
                                 <ContentPresenter x:Name="content" Visibility="Collapsed" VerticalAlignment="Center" Margin="5,0,0,0" Grid.Column="1" Content="{TemplateBinding Content}"/>
                             </Grid>
                         </Border>
@@ -141,7 +141,7 @@
                 <Setter Property="Background" Value="{StaticResource DarkerBlue}"/>
             </Trigger>
             <Trigger Property="IsChecked" Value="True">
-                <Setter Property="local:ButtonProperties.Visibility" Value="Visible"/>
+                <Setter Property="local:CustomProperties.Visibility" Value="Visible"/>
                 <Setter Property="Background" Value="{StaticResource DarkerBlue}"/>
             </Trigger>
         </Style.Triggers>

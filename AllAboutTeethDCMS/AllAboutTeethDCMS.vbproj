@@ -119,8 +119,7 @@
       <DependentUpon>Application.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AttachedProperties\ButtonProperties.vb" />
-    <Compile Include="AttachedProperties\RibbonProperties.vb" />
+    <Compile Include="CustomProperties.vb" />
     <Compile Include="Ribbons\AccountsRibbon.xaml.vb">
       <DependentUpon>AccountsRibbon.xaml</DependentUpon>
     </Compile>

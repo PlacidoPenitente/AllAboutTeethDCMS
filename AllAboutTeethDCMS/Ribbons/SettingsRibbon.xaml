@@ -10,9 +10,9 @@
         <WrapPanel VerticalAlignment="Top" Orientation="Horizontal" RenderOptions.EdgeMode="Aliased" SnapsToDevicePixels="True">
             <Border Margin="2" BorderThickness="1" BorderBrush="{StaticResource Blue}">
                 <StackPanel>
-                    <Button local:ButtonProperties.Image="{StaticResource System}" Content="System Settings" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource Server}" Content="Server Settings" Style="{StaticResource RibbonButton}"/>
-                    <Button local:ButtonProperties.Image="{StaticResource Database}" Content="Backup Or Restore" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource System}" Content="System Settings" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource Server}" Content="Server Settings" Style="{StaticResource RibbonButton}"/>
+                    <Button local:CustomProperties.Image="{StaticResource Database}" Content="Backup Or Restore" Style="{StaticResource RibbonButton}"/>
                 </StackPanel>
             </Border>
         </WrapPanel>

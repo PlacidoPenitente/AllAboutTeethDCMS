@@ -30,34 +30,34 @@
                 <RadioButton x:Name="help" Content="Help" Height="25" Style="{StaticResource MenuButton}"/>
             </WrapPanel>
             <ToggleButton VerticalAlignment="Bottom" x:Name="pin" Height="25" IsChecked="True" Grid.Column="1" Style="{StaticResource Pin}"/>
-            <ToggleButton x:Name="user" Height="25" VerticalAlignment="Bottom" local:ButtonProperties.Image="{StaticResource User}" Grid.Column="2" Content="Jay Mark Estrera" Style="{StaticResource RibbonButtonAlternate}"/>
+            <ToggleButton x:Name="user" Height="25" VerticalAlignment="Bottom" local:CustomProperties.Image="{StaticResource User}" Grid.Column="2" Content="Jay Mark Estrera" Style="{StaticResource RibbonButtonAlternate}"/>
         </Grid>
         <Grid Grid.Row="1" Background="{StaticResource LighterBlue}">
-            <Grid Visibility="{Binding ElementName=pin, Path=(local:ButtonProperties.Visibility)}" Background="{StaticResource DarkerBlue}">
+            <Grid Visibility="{Binding ElementName=pin, Path=(local:CustomProperties.Visibility)}" Background="{StaticResource DarkerBlue}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <local:HomeRibbon Visibility="{Binding ElementName=home, Path=(local:ButtonProperties.Visibility)}"/>
-                <local:PatientsRibbon Visibility="{Binding ElementName=patients, Path=(local:ButtonProperties.Visibility)}"/>
-                <local:OperationsRibbon Visibility="{Binding ElementName=operations, Path=(local:ButtonProperties.Visibility)}"/>
-                <local:DentistsRibbon Visibility="{Binding ElementName=dentists, Path=(local:ButtonProperties.Visibility)}"/>
-                <local:InventoryRibbon Visibility="{Binding ElementName=inventory, Path=(local:ButtonProperties.Visibility)}"/>
-                <local:AccountsRibbon Visibility="{Binding ElementName=accounts, Path=(local:ButtonProperties.Visibility)}"/>
-                <local:SettingsRibbon Visibility="{Binding ElementName=settings, Path=(local:ButtonProperties.Visibility)}"/>
-                <local:HelpRibbon Visibility="{Binding ElementName=help, Path=(local:ButtonProperties.Visibility)}"/>
-                <Border Visibility="{Binding ElementName=user, Path=(local:ButtonProperties.Visibility)}" Margin="2" Height="Auto" VerticalAlignment="Top" BorderThickness="1" Grid.Column="1" BorderBrush="{StaticResource Blue}">
+                <local:HomeRibbon Visibility="{Binding ElementName=home, Path=(local:CustomProperties.Visibility)}"/>
+                <local:PatientsRibbon Visibility="{Binding ElementName=patients, Path=(local:CustomProperties.Visibility)}"/>
+                <local:OperationsRibbon Visibility="{Binding ElementName=operations, Path=(local:CustomProperties.Visibility)}"/>
+                <local:DentistsRibbon Visibility="{Binding ElementName=dentists, Path=(local:CustomProperties.Visibility)}"/>
+                <local:InventoryRibbon Visibility="{Binding ElementName=inventory, Path=(local:CustomProperties.Visibility)}"/>
+                <local:AccountsRibbon Visibility="{Binding ElementName=accounts, Path=(local:CustomProperties.Visibility)}"/>
+                <local:SettingsRibbon Visibility="{Binding ElementName=settings, Path=(local:CustomProperties.Visibility)}"/>
+                <local:HelpRibbon Visibility="{Binding ElementName=help, Path=(local:CustomProperties.Visibility)}"/>
+                <Border Visibility="{Binding ElementName=user, Path=(local:CustomProperties.Visibility)}" Margin="2" Height="Auto" VerticalAlignment="Top" BorderThickness="1" Grid.Column="1" BorderBrush="{StaticResource Blue}">
                     <StackPanel>
-                        <Button local:ButtonProperties.Image="{StaticResource RemoveFromQueue}" Content="Account Settings" Style="{StaticResource RibbonButton}"/>
-                        <Button local:ButtonProperties.Image="{StaticResource ViewQueue}" Content="Change Password" Style="{StaticResource RibbonButton}"/>
-                        <Button local:ButtonProperties.Image="{StaticResource ViewQueue}" Content="Log Out" Style="{StaticResource RibbonButton}"/>
+                        <Button local:CustomProperties.Image="{StaticResource RemoveFromQueue}" Content="Account Settings" Style="{StaticResource RibbonButton}"/>
+                        <Button local:CustomProperties.Image="{StaticResource ViewQueue}" Content="Change Password" Style="{StaticResource RibbonButton}"/>
+                        <Button local:CustomProperties.Image="{StaticResource ViewQueue}" Content="Log Out" Style="{StaticResource RibbonButton}"/>
                     </StackPanel>
                 </Border>
             </Grid>
         </Grid>
         <Grid Grid.Row="3" Background="{StaticResource Blue}">
             <StackPanel Orientation="Horizontal">
-                <Label VerticalContentAlignment="Center" FontFamily="Century Gothic" Foreground="White" Content="{Binding ElementName=pin, Path=(local:ButtonProperties.Visibility)}"/>
+                <Label VerticalContentAlignment="Center" FontFamily="Century Gothic" Foreground="White" Content="{Binding ElementName=pin, Path=(local:CustomProperties.Visibility)}"/>
                 <Border Width="2" Background="{StaticResource LightBlue}" RenderOptions.EdgeMode="Aliased"/>
                 <Label VerticalContentAlignment="Center" FontFamily="Century Gothic" Foreground="White" Content="Connected"/>
             </StackPanel>
