@@ -246,4 +246,180 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style x:Key="ItemContainerStyle" TargetType="{x:Type ComboBoxItem}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                    <Border Background="{TemplateBinding Background}" Padding="5" SnapsToDevicePixels="True">
+                        <ContentPresenter/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsHighlighted" Value="True">
+                            <Setter Property="Background" Value="{StaticResource Blue}"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ComboBox" TargetType="{x:Type ComboBox}">
+        <Setter Property="BorderBrush" Value="{StaticResource DarkerBlue}"/>
+        <Setter Property="FontFamily" Value="Century Gothic"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource ItemContainerStyle}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBox}">
+                    <StackPanel>
+                        <Border x:Name="root" BorderThickness="0,0,0,2" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="True">
+                            <StackPanel>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Popup x:Name="PART_Popup" AllowsTransparency="True" Grid.ColumnSpan="2" Margin="1" Width="{TemplateBinding Width}" IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}" PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" PlacementTarget="{Binding ElementName=root}" Placement="Bottom">
+                                        <Border x:Name="DropDownBorder" SnapsToDevicePixels="True" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
+                                            <ScrollViewer x:Name="DropDownScrollViewer">
+                                                <Grid RenderOptions.ClearTypeHint="Enabled">
+                                                    <ItemsPresenter x:Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Contained" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                                </Grid>
+                                            </ScrollViewer>
+                                        </Border>
+                                    </Popup>
+                                    <ToggleButton BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" Grid.ColumnSpan="2" IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
+                                        <ToggleButton.Style>
+                                            <Style TargetType="{x:Type ToggleButton}">
+                                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                                <Setter Property="IsTabStop" Value="False"/>
+                                                <Setter Property="Focusable" Value="False"/>
+                                                <Setter Property="ClickMode" Value="Press"/>
+                                                <Setter Property="Background" Value="{StaticResource Blue}"/>
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="{x:Type ToggleButton}">
+                                                            <Grid>
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="*"/>
+                                                                    <ColumnDefinition Width="16"/>
+                                                                </Grid.ColumnDefinitions>
+                                                                <Border Grid.Column="0" Background="Transparent"/>
+                                                                <Border Grid.Column="1" Background="Transparent">
+                                                                    <Path Data="M0,0L3.5,4 7,0z" Fill="{TemplateBinding BorderBrush}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                                </Border>
+                                                            </Grid>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style>
+                                        </ToggleButton.Style>
+                                    </ToggleButton>
+                                    <ContentPresenter ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" Margin="5" Content="{TemplateBinding SelectionBoxItem}" ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" IsHitTestVisible="False" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                        <Label Foreground="{TemplateBinding BorderBrush}" HorizontalAlignment="Center" FontWeight="Bold" Content="{TemplateBinding local:CustomProperties.Label}" FontFamily="{TemplateBinding FontFamily}" FontSize="12"/>
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="BorderBrush" Value="{StaticResource Blue}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="DatePickerButton" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border>
+                        <Image Source="{StaticResource Schedule}" Width="24"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DatePickerTextBox" TargetType="{x:Type TextBox}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border>
+                        <ScrollViewer x:Name="PART_ContentHost" Margin="5" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="Foreground" Value="Black"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="DatePickerCalendar" TargetType="{x:Type Calendar}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Calendar}">
+                    <StackPanel x:Name="PART_Root" HorizontalAlignment="Center">
+                        <CalendarItem x:Name="PART_CalendarItem" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Style="{TemplateBinding CalendarItemStyle}"/>
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DatePicker" TargetType="{x:Type DatePicker}">
+        <Setter Property="Background" Value="{StaticResource DarkerBlue}"/>
+        <Setter Property="FontFamily" Value="Century Gothic"/>
+        <Setter Property="CalendarStyle" Value="{StaticResource DatePickerCalendar}"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DatePicker}">
+                    <StackPanel SnapsToDevicePixels="True">
+                        <Border x:Name="border" BorderThickness="0,0,0,2" BorderBrush="{TemplateBinding Background}">
+                            <StackPanel>
+                                <Grid x:Name="PART_Root">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <DatePickerTextBox x:Name="PART_TextBox" Grid.Column="0" FontSize="{TemplateBinding FontSize}" Style="{StaticResource DatePickerTextBox}"/>
+                                    <Button x:Name="PART_Button" Grid.Column="1" Style="{StaticResource DatePickerButton}"/>
+                                    <Grid x:Name="PART_DisabledVisual" Grid.ColumnSpan="2" Grid.Column="0" IsHitTestVisible="False" Opacity="0" Grid.Row="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Rectangle Grid.Column="0" Fill="#A5FFFFFF" RadiusY="1" Grid.Row="0" RadiusX="1" />
+                                        <Rectangle Grid.Column="1" Fill="#A5FFFFFF" Height="18" Margin="3,0,3,0" RadiusY="1" Grid.Row="0" RadiusX="1" Width="19" />
+                                        <Popup x:Name="PART_Popup" AllowsTransparency="True" Placement="Bottom" PlacementTarget="{Binding ElementName=PART_TextBox}" StaysOpen="False" />
+                                    </Grid>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                        <Label x:Name="label" Foreground="{TemplateBinding Background}" HorizontalAlignment="Center" FontWeight="Bold" Content="{TemplateBinding local:CustomProperties.Label}" FontFamily="{TemplateBinding FontFamily}" FontSize="12"/>
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True" SourceName="PART_TextBox">
+                            <Setter Property="BorderBrush" Value="{StaticResource Blue}" TargetName="border"/>
+                            <Setter Property="Foreground" Value="{StaticResource Blue}" TargetName="label"/>
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="True" SourceName="PART_Button">
+                            <Setter Property="BorderBrush" Value="{StaticResource Blue}" TargetName="border"/>
+                            <Setter Property="Foreground" Value="{StaticResource Blue}" TargetName="label"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>
