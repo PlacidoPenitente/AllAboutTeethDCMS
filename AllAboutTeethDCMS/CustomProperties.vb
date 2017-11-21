@@ -31,4 +31,14 @@
         Return element.GetValue(LabelProperty)
     End Function
 
+    Public Shared ReadOnly HintProperty As DependencyProperty = DependencyProperty.RegisterAttached("Hint", GetType(String), GetType(CustomProperties), New PropertyMetadata(""))
+
+    Public Shared Sub SetHint(ByVal element As DependencyObject, ByVal value As String)
+        element.SetValue(HintProperty, value)
+    End Sub
+
+    Public Shared Function GetHint(ByVal element As DependencyObject) As String
+        Return element.GetValue(HintProperty)
+    End Function
+
 End Class

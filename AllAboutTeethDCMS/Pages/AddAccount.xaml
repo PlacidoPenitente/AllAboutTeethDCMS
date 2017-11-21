@@ -7,21 +7,50 @@
              mc:Ignorable="d" 
              d:DesignHeight="1024" d:DesignWidth="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="1">
+        <StackPanel Grid.Column="1" Grid.Row="1">
             <StackPanel Orientation="Horizontal">
-                <TextBox Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Family Name" Margin="10"/>
-                <TextBox Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Given Name" Margin="10"/>
-                <TextBox Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Middle Name" Margin="10"/>
+                <TextBox Width="190" VerticalAlignment="Bottom" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Family Name" Margin="10"/>
+                <TextBox Width="190" VerticalAlignment="Bottom" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Given Name" Margin="10"/>
+                <TextBox Width="50" VerticalAlignment="Bottom" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="M.I." Margin="10"/>
+                <Border Width="150" Height="150" Margin="10" BorderBrush="{StaticResource DarkerBlue}" BorderThickness="2" SnapsToDevicePixels="True">
+                    <Image/>
+                </Border>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBox Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Account No." Margin="10" IsReadOnly="True"/>
-                <PasswordBox Width="200" Style="{StaticResource PassBoxStyle}" local:CustomProperties.Label="Password" Margin="10"/>
+                <PasswordBox Width="200" Style="{StaticResource PassBoxStyle}" local:CustomProperties.Label="Password" Margin="10" local:CustomProperties.Hint="Paswword:"/>
                 <PasswordBox Width="200" Style="{StaticResource PassBoxStyle}" local:CustomProperties.Label="Confirm Password" Margin="10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Family Name" Margin="10"/>
+                <TextBox Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Given Name" Margin="10"/>
+                <TextBox Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Contact no." Margin="10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Width="420" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Recovery Question No. 1" Margin="10"/>
+                <TextBox Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Answer" Margin="10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Width="420" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Recovery Question No. 2" Margin="10"/>
+                <TextBox Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Answer" Margin="10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Width="420" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Recovery Question No. 3" Margin="10"/>
+                <TextBox Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Answer" Margin="10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Save" Style="{StaticResource ButtonStyle}" Margin="10" Width="75"/>
+                <Button Content="Cancel" Style="{StaticResource ButtonStyle}" Margin="10" Width="75"/>
             </StackPanel>
         </StackPanel>
     </Grid>

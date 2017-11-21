@@ -56,12 +56,12 @@
             </Grid>
         </Grid>
         <ScrollViewer x:Name="scrollviewer" Grid.Row="2" VerticalScrollBarVisibility="Hidden">
-            <local:AddAccount Margin="0,50,0,0" Height="800"/>
+            <local:AddAccount Margin="0,50,0,0"/>
         </ScrollViewer>
         <StackPanel Grid.Row="2" IsHitTestVisible="False">
             <StackPanel Background="{StaticResource DarkerBlue}" Height="50" Orientation="Horizontal">
                 <StackPanel.Effect>
-                    <DropShadowEffect Direction="270" Opacity="0.5"/>
+                    <DropShadowEffect Direction="270" BlurRadius="10" Opacity="0.5"/>
                 </StackPanel.Effect>
                 <Label Content="Add Account" FontFamily="Century Gothic" Foreground="White" FontSize="18" VerticalAlignment="Center" Margin="5"/>
             </StackPanel>

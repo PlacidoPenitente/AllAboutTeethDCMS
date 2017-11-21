@@ -179,8 +179,8 @@
                             <ScrollViewer x:Name="PART_ContentHost" Margin="5" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
                         </Border>
                         <Popup x:Name="popup" Placement="Top" AllowsTransparency="True" PlacementTarget="{Binding ElementName=container}" IsOpen="False" Width="{TemplateBinding Width}">
-                            <Border Background="{StaticResource DarkerBlue}" Height="35" CornerRadius="3">
-                                <Label Content="Hello"/>
+                            <Border Background="{StaticResource Blue}" SnapsToDevicePixels="True">
+                                <TextBlock Text="{TemplateBinding local:CustomProperties.Hint}" Foreground="White" FontSize="12" Margin="5" TextWrapping="Wrap"/>
                             </Border>
                         </Popup>
                         <Label Foreground="{TemplateBinding BorderBrush}" HorizontalAlignment="Center" FontWeight="Bold" Content="{TemplateBinding local:CustomProperties.Label}" FontFamily="{TemplateBinding FontFamily}" FontSize="12"/>
@@ -198,5 +198,29 @@
                 <Setter Property="BorderBrush" Value="{StaticResource Blue}"/>
             </Trigger>
         </Style.Triggers>
+    </Style>
+
+    <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="FontFamily" Value="Century Gothic"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" Background="{StaticResource DarkerBlue}" SnapsToDevicePixels="True">
+                        <Border.Effect>
+                            <DropShadowEffect x:Name="dropshadow" BlurRadius="10" Direction="270" Opacity="0.5"/>
+                        </Border.Effect>
+                        <ContentPresenter Margin="10" HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{StaticResource Blue}" TargetName="border"/>
+                            <Setter Property="Effect" Value="{x:Null}" TargetName="border"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 </ResourceDictionary>
