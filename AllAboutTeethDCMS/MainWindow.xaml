@@ -55,6 +55,17 @@
                 </Border>
             </Grid>
         </Grid>
+        <ScrollViewer x:Name="scrollviewer" Grid.Row="2" VerticalScrollBarVisibility="Hidden">
+            <local:AddAccount Margin="0,50,0,0" Height="800"/>
+        </ScrollViewer>
+        <StackPanel Grid.Row="2" IsHitTestVisible="False">
+            <StackPanel Background="{StaticResource DarkerBlue}" Height="50" Orientation="Horizontal">
+                <StackPanel.Effect>
+                    <DropShadowEffect Direction="270" Opacity="0.5"/>
+                </StackPanel.Effect>
+                <Label Content="Add Account" FontFamily="Century Gothic" Foreground="White" FontSize="18" VerticalAlignment="Center" Margin="5"/>
+            </StackPanel>
+        </StackPanel>
         <Grid Grid.Row="3" Background="{StaticResource Blue}">
             <StackPanel Orientation="Horizontal">
                 <Label VerticalContentAlignment="Center" FontFamily="Century Gothic" Foreground="White" Content="{Binding ElementName=pin, Path=(local:CustomProperties.Visibility)}"/>
