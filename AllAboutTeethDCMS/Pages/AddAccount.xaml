@@ -44,7 +44,7 @@
                     <ComboBoxItem Content="Male"/>
                     <ComboBoxItem Content="Female"/>
                 </ComboBox>
-                <DatePicker Width="200" Style="{StaticResource DatePicker}" local:CustomProperties.Label="Birthday" Margin="10"/>
+                <DatePicker SelectedDate="{Binding Birthdate, Mode=TwoWay}" Width="200" Style="{StaticResource DatePicker}" local:CustomProperties.Label="Birthday" Margin="10"/>
                 <TextBox Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Contact no." Margin="10"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
