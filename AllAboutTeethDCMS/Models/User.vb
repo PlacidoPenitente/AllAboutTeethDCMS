@@ -37,11 +37,11 @@
         End Set
     End Property
 
-    Public Property Question1 As Date
+    Public Property Question1 As String
         Get
             Return m_question1
         End Get
-        Set(value As Date)
+        Set(value As String)
             m_question1 = value
         End Set
     End Property
