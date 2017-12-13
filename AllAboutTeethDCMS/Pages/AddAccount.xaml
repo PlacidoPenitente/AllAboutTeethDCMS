@@ -23,8 +23,8 @@
         <StackPanel Grid.Column="1" Grid.Row="1">
             <StackPanel Orientation="Horizontal">
                 <TextBox Text="{Binding FamilyName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Width="190" VerticalAlignment="Bottom" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Family Name" Margin="10"/>
-                <TextBox Width="190" VerticalAlignment="Bottom" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Given Name" Margin="10"/>
-                <TextBox Width="50" VerticalAlignment="Bottom" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="M.I." Margin="10"/>
+                <TextBox Text="{Binding GivenName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="190" VerticalAlignment="Bottom" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Given Name" Margin="10"/>
+                <TextBox Text="{Binding MiddleInitial, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50" VerticalAlignment="Bottom" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="M.I." Margin="10"/>
                 <Border Width="150" Height="150" Margin="10" BorderBrush="{StaticResource DarkerBlue}" BorderThickness="2" SnapsToDevicePixels="True">
                     <Grid>
                         <Image/>
@@ -35,12 +35,12 @@
                 </Border>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBox Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Account No." Margin="10" IsReadOnly="True"/>
+                <TextBox Text="{Binding AccountID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Account No." Margin="10" IsReadOnly="True"/>
                 <PasswordBox Width="200" Style="{StaticResource PassBoxStyle}" local:CustomProperties.Label="Password" Margin="10" local:CustomProperties.Hint="Paswword:"/>
                 <PasswordBox Width="200" Style="{StaticResource PassBoxStyle}" local:CustomProperties.Label="Confirm Password" Margin="10"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <ComboBox Width="200" Style="{StaticResource ComboBox}" local:CustomProperties.Label="Gender" Margin="10" SelectedIndex="0">
+                <ComboBox Width="200" SelectedItem="{Binding Gender, Mode=TwoWay}" Style="{StaticResource ComboBox}" local:CustomProperties.Label="Gender" Margin="10" SelectedIndex="0">
                     <ComboBoxItem Content="Male"/>
                     <ComboBoxItem Content="Female"/>
                 </ComboBox>
