@@ -1,3 +1,3 @@
-﻿Public Class AccountsRibbon
+﻿Public Class PatientsRibbon
 
 End Class
