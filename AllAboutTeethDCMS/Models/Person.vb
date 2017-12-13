@@ -7,4 +7,5 @@
     Public Property ContactNo As String
     Public Property Address As String
     Public Property EmailAddress As String
+    Public Property Image As String
 End Class
