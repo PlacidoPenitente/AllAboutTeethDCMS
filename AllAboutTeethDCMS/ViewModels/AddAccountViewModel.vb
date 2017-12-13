@@ -2,6 +2,10 @@
 
 Public Class AddAccountViewModel
     Implements INotifyPropertyChanged
+
+    Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
+    Public m_pce As PropertyChangedEventArgs
+
     Private user As New User
 
     Public Property FamilyName As String
@@ -9,6 +13,8 @@ Public Class AddAccountViewModel
             Return user.FamilyName
         End Get
         Set(value As String)
+            m_pce = New PropertyChangedEventArgs("FamilyName")
+            RaiseEvent PropertyChanged(Me, m_pce)
             user.FamilyName = value
         End Set
     End Property
@@ -156,6 +162,4 @@ Public Class AddAccountViewModel
             user.Answer3 = value
         End Set
     End Property
-
-    Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
 End Class
