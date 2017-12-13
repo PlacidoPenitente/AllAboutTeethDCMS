@@ -1,7 +1,4 @@
-﻿Imports System.Windows
-Imports System.Windows.Media
-
-Public Class CustomProperties
+﻿Public Class CustomProperties
     Inherits DependencyObject
 
     Public Shared ReadOnly ImageProperty As DependencyProperty = DependencyProperty.RegisterAttached("Image", GetType(ImageSource), GetType(CustomProperties), New PropertyMetadata(New ImageBrush().ImageSource))
@@ -11,17 +8,17 @@ Public Class CustomProperties
     End Sub
 
     Public Shared Function GetImage(ByVal button As DependencyObject) As ImageSource
-        Return CType(button.GetValue(ImageProperty), ImageSource)
+        Return button.GetValue(ImageProperty)
     End Function
 
     Public Shared ReadOnly VisibilityProperty As DependencyProperty = DependencyProperty.RegisterAttached("Visibility", GetType(Visibility), GetType(CustomProperties), New PropertyMetadata(Visibility.Visible))
 
-    Public Shared Sub SetVisibility(ByVal element As System.Windows.DependencyObject, ByVal value As Visibility)
+    Public Shared Sub SetVisibility(ByVal element As DependencyObject, ByVal value As Visibility)
         element.SetValue(VisibilityProperty, value)
     End Sub
 
     Public Shared Function GetVisibility(ByVal element As DependencyObject) As Visibility
-        Return CType(element.GetValue(VisibilityProperty), Visibility)
+        Return element.GetValue(VisibilityProperty)
     End Function
 
     Public Shared ReadOnly LabelProperty As DependencyProperty = DependencyProperty.RegisterAttached("Label", GetType(String), GetType(CustomProperties), New PropertyMetadata(""))
@@ -31,7 +28,7 @@ Public Class CustomProperties
     End Sub
 
     Public Shared Function GetLabel(ByVal element As DependencyObject) As String
-        Return CType(element.GetValue(LabelProperty), String)
+        Return element.GetValue(LabelProperty)
     End Function
 
     Public Shared ReadOnly HintProperty As DependencyProperty = DependencyProperty.RegisterAttached("Hint", GetType(String), GetType(CustomProperties), New PropertyMetadata(""))
@@ -41,7 +38,7 @@ Public Class CustomProperties
     End Sub
 
     Public Shared Function GetHint(ByVal element As DependencyObject) As String
-        Return CType(element.GetValue(HintProperty), String)
+        Return element.GetValue(HintProperty)
     End Function
 
 End Class

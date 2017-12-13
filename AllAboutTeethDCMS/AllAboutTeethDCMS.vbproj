@@ -68,9 +68,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Models\Patient.vb" />
-    <Compile Include="Models\Person.vb" />
-    <Compile Include="Models\User.vb" />
     <Compile Include="Pages\AddAccount.xaml.vb">
       <DependentUpon>AddAccount.xaml</DependentUpon>
     </Compile>

@@ -45,10 +45,6 @@
                 <TextBox Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Contact no." Margin="10"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBox Width="420" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Address" Margin="10"/>
-                <TextBox Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Email Address" Margin="10"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
                 <TextBox Width="420" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Recovery Question No. 1" Margin="10"/>
                 <TextBox Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Answer" Margin="10"/>
             </StackPanel>
