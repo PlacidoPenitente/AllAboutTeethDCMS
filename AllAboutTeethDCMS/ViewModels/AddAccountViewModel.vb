@@ -1,4 +1,7 @@
-﻿Public Class AddAccountViewModel
+﻿Imports System.ComponentModel
+
+Public Class AddAccountViewModel
+    Implements INotifyPropertyChanged
     Private user As New User
 
     Public Property FamilyName As String
@@ -153,4 +156,6 @@
             user.Answer3 = value
         End Set
     End Property
+
+    Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
 End Class
