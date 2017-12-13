@@ -74,7 +74,7 @@
     <Compile Include="Pages\AddAccount.xaml.vb">
       <DependentUpon>AddAccount.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Ribbons\AccountsRibbon.vb" />
+    <Compile Include="Ribbons\AccountsRibbon.xaml.vb" />
     <Compile Include="Ribbons\HelpRibbon.xaml.vb">
       <DependentUpon>HelpRibbon.xaml</DependentUpon>
     </Compile>
