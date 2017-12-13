@@ -74,7 +74,6 @@
     <Compile Include="Pages\AddAccount.xaml.vb">
       <DependentUpon>AddAccount.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Ribbons\AccountsRibbon.xaml.vb" />
     <Compile Include="Ribbons\HelpRibbon.xaml.vb">
       <DependentUpon>HelpRibbon.xaml</DependentUpon>
     </Compile>
@@ -94,10 +93,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\AddAccount.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Ribbons\AccountsRibbon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
