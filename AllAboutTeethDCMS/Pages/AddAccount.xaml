@@ -40,28 +40,28 @@
                 <PasswordBox Width="200" Style="{StaticResource PassBoxStyle}" local:CustomProperties.Label="Confirm Password" Margin="10"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <ComboBox Width="200" SelectedItem="{Binding Gender, Mode=TwoWay}" Style="{StaticResource ComboBox}" local:CustomProperties.Label="Gender" Margin="10" SelectedIndex="0">
+                <ComboBox Width="200" SelectedItem="{Binding Gender, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource ComboBox}" local:CustomProperties.Label="Gender" Margin="10" SelectedIndex="0">
                     <ComboBoxItem Content="Male"/>
                     <ComboBoxItem Content="Female"/>
                 </ComboBox>
-                <DatePicker SelectedDate="{Binding Birthdate, Mode=TwoWay}" Width="200" Style="{StaticResource DatePicker}" local:CustomProperties.Label="Birthday" Margin="10"/>
-                <TextBox Text="{Binding ContactNo, Mode=TwoWay}" Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Contact no." Margin="10"/>
+                <DatePicker SelectedDate="{Binding Birthdate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="200" Style="{StaticResource DatePicker}" local:CustomProperties.Label="Birthday" Margin="10"/>
+                <TextBox Text="{Binding ContactNo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Contact no." Margin="10"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBox Text="{Binding Address, Mode=TwoWay}" Width="420" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Address" Margin="10"/>
-                <TextBox Text="{Binding EmailAddress, Mode=TwoWay}" Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Email Address" Margin="10"/>
+                <TextBox Text="{Binding Address, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="420" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Address" Margin="10"/>
+                <TextBox Text="{Binding EmailAddress, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Email Address" Margin="10"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBox Text="{Binding Question1, Mode=TwoWay}" Width="420" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Recovery Question No. 1" Margin="10"/>
-                <TextBox Text="{Binding Answer1, Mode=TwoWay}" Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Answer" Margin="10"/>
+                <TextBox Text="{Binding Question1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="420" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Recovery Question No. 1" Margin="10"/>
+                <TextBox Text="{Binding Answer1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Answer" Margin="10"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBox Text="{Binding Question2, Mode=TwoWay}" Width="420" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Recovery Question No. 2" Margin="10"/>
-                <TextBox Text="{Binding Answer2, Mode=TwoWay}" Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Answer" Margin="10"/>
+                <TextBox Text="{Binding Question2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="420" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Recovery Question No. 2" Margin="10"/>
+                <TextBox Text="{Binding Answer2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Answer" Margin="10"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBox Text="{Binding Question3, Mode=TwoWay}" Width="420" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Recovery Question No. 3" Margin="10"/>
-                <TextBox Text="{Binding Answer3, Mode=TwoWay}" Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Answer" Margin="10"/>
+                <TextBox Text="{Binding Question3, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="420" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Recovery Question No. 3" Margin="10"/>
+                <TextBox Text="{Binding Answer3, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Answer" Margin="10"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Content="Save" Style="{StaticResource ButtonStyle}" Margin="10" Width="75"/>

@@ -4,7 +4,11 @@ Public Class AddAccountViewModel
     Implements INotifyPropertyChanged
 
     Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
-    Public m_pce As PropertyChangedEventArgs
+
+    Public Sub OnPropertyChanged(propertyName As String)
+        RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+        MessageBox.Show(propertyName)
+    End Sub
 
     Private user As New User
 
@@ -13,9 +17,8 @@ Public Class AddAccountViewModel
             Return user.FamilyName
         End Get
         Set(value As String)
-            m_pce = New PropertyChangedEventArgs("FamilyName")
-            RaiseEvent PropertyChanged(Me, m_pce)
             user.FamilyName = value
+            OnPropertyChanged("FamilyName")
         End Set
     End Property
 
@@ -25,6 +28,7 @@ Public Class AddAccountViewModel
         End Get
         Set(value As String)
             user.GivenName = value
+            OnPropertyChanged("GivenName")
         End Set
     End Property
 
@@ -34,6 +38,7 @@ Public Class AddAccountViewModel
         End Get
         Set(value As String)
             user.MiddleInitial = value
+            OnPropertyChanged("MiddleInitial")
         End Set
     End Property
 
@@ -43,6 +48,7 @@ Public Class AddAccountViewModel
         End Get
         Set(value As Date)
             user.Birthdate = value
+            OnPropertyChanged("Birthdate")
         End Set
     End Property
 
@@ -52,6 +58,7 @@ Public Class AddAccountViewModel
         End Get
         Set(value As String)
             user.AccountID = value
+            OnPropertyChanged("AccountID")
         End Set
     End Property
 
@@ -61,6 +68,7 @@ Public Class AddAccountViewModel
         End Get
         Set(value As String)
             user.Password = value
+            OnPropertyChanged("Password")
         End Set
     End Property
 
@@ -70,6 +78,7 @@ Public Class AddAccountViewModel
         End Get
         Set(value As String)
             user.Gender = value
+            OnPropertyChanged("Gender")
         End Set
     End Property
 
@@ -79,6 +88,7 @@ Public Class AddAccountViewModel
         End Get
         Set(value As String)
             user.ContactNo = value
+            OnPropertyChanged("ContactNo")
         End Set
     End Property
 
@@ -88,6 +98,7 @@ Public Class AddAccountViewModel
         End Get
         Set(value As String)
             user.Address = value
+            OnPropertyChanged("Address")
         End Set
     End Property
 
@@ -97,6 +108,7 @@ Public Class AddAccountViewModel
         End Get
         Set(value As String)
             user.EmailAddress = value
+            OnPropertyChanged("EmailAddress")
         End Set
     End Property
 
@@ -106,6 +118,7 @@ Public Class AddAccountViewModel
         End Get
         Set(value As String)
             user.Image = value
+            OnPropertyChanged("Image")
         End Set
     End Property
 
@@ -115,6 +128,7 @@ Public Class AddAccountViewModel
         End Get
         Set(value As String)
             user.Question1 = value
+            OnPropertyChanged("Question1")
         End Set
     End Property
 
@@ -124,6 +138,7 @@ Public Class AddAccountViewModel
         End Get
         Set(value As String)
             user.Question2 = value
+            OnPropertyChanged("Question2")
         End Set
     End Property
 
@@ -133,6 +148,7 @@ Public Class AddAccountViewModel
         End Get
         Set(value As String)
             user.Question3 = value
+            OnPropertyChanged("Question3")
         End Set
     End Property
 
@@ -142,6 +158,7 @@ Public Class AddAccountViewModel
         End Get
         Set(value As String)
             user.Answer1 = value
+            OnPropertyChanged("Answer1")
         End Set
     End Property
 
@@ -151,6 +168,7 @@ Public Class AddAccountViewModel
         End Get
         Set(value As String)
             user.Answer2 = value
+            OnPropertyChanged("Answer2")
         End Set
     End Property
 
@@ -160,6 +178,7 @@ Public Class AddAccountViewModel
         End Get
         Set(value As String)
             user.Answer3 = value
+            OnPropertyChanged("Answer3")
         End Set
     End Property
 End Class
