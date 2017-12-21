@@ -7,7 +7,6 @@ Public Class AddAccountViewModel
 
     Public Sub OnPropertyChanged(propertyName As String)
         RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-        MessageBox.Show(propertyName)
     End Sub
 
     Private user As New User
