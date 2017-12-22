@@ -25,7 +25,6 @@ Public Class AddAccount
     Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
         Dim addAccountViewModel As AddAccountViewModel = DataContext
         addAccountViewModel.Image = browseImage()
-        MessageBox.Show(addAccountViewModel.Image)
     End Sub
 
     Public Function browseImage() As String
@@ -35,12 +34,6 @@ Public Class AddAccount
         open.Title = "Select an image."
         open.Filter = "Image (*.jpg)|*.jpg"
         open.ShowDialog()
-        'Dim stream As New MemoryStream
-        'Dim image As Image = Image.FromFile(open.FileName)
-        'Dim imageBytes As Byte()
-        'image.Save(stream, Imaging.ImageFormat.Jpeg)
-        'imageBytes = stream.ToArray()
-        'Return Convert.ToBase64String(imageBytes)
         Return open.FileName.Replace("\\", "/")
     End Function
 End Class
