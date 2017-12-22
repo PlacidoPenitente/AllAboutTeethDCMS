@@ -27,7 +27,7 @@
                 <TextBox Text="{Binding MiddleInitial, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50" VerticalAlignment="Bottom" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="M.I." Margin="10"/>
                 <Border Width="150" Height="150" Margin="10" BorderBrush="{StaticResource DarkerBlue}" BorderThickness="2" SnapsToDevicePixels="True">
                     <Grid>
-                        <Image/>
+                        <Image Source="{Binding Image, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource string_to_image}}"/>
                         <Grid>
                             <Button Click="Button_Click" VerticalAlignment="Bottom" Content="Browse Image" Style="{StaticResource ButtonStyleAlternate}"/>
                         </Grid>
