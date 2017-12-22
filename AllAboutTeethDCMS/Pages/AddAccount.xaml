@@ -29,7 +29,7 @@
                     <Grid>
                         <Image/>
                         <Grid>
-                            <Button VerticalAlignment="Bottom" Content="Browse Image" Style="{StaticResource ButtonStyleAlternate}"/>
+                            <Button Click="Button_Click" VerticalAlignment="Bottom" Content="Browse Image" Style="{StaticResource ButtonStyleAlternate}"/>
                         </Grid>
                     </Grid>
                 </Border>

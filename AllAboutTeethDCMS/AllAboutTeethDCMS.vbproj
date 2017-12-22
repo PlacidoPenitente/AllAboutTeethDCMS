@@ -68,6 +68,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\Base64ToImage.vb" />
     <Compile Include="Models\Patient.vb" />
     <Compile Include="Models\Person.vb" />
     <Compile Include="Models\User.vb" />
