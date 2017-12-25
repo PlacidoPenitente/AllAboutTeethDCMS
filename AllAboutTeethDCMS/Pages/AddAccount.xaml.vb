@@ -1,7 +1,4 @@
-﻿Imports System.Drawing
-Imports System.IO
-
-Public Class AddAccount
+﻿Public Class AddAccount
     Private open As Forms.OpenFileDialog
 
     Private Sub PasswordBox_PasswordChanged(sender As Object, e As RoutedEventArgs)
