@@ -5,14 +5,11 @@ Public Class AddAccountViewModel
     Implements INotifyPropertyChanged
 
     Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
-
     Private m_databaseConnection As Database
-
-    Public Sub OnPropertyChanged(propertyName As String)
-        RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-    End Sub
-
+    Private m_user As User
+    Private m_currentUser As User
     Private m_genders As ArrayList
+    Private m_accountTypes As ArrayList
 
     Public Sub New()
         m_user = New User()
@@ -21,10 +18,24 @@ Public Class AddAccountViewModel
         m_genders = New ArrayList()
         m_genders.Add("Male")
         m_genders.Add("Female")
+        m_accountTypes = New ArrayList()
+        m_accountTypes.Add("Dentist")
+        m_accountTypes.Add("Staff")
     End Sub
 
-    Private m_user As User
-    Private m_currentUser As User
+    Public Sub OnPropertyChanged(propertyName As String)
+        RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+    End Sub
+
+    Public Property AccountType As String
+        Get
+            Return User.AccountType
+        End Get
+        Set(value As String)
+            User.AccountType = value
+            OnPropertyChanged("AccountType")
+        End Set
+    End Property
 
     Public Property FamilyName As String
         Get
@@ -229,6 +240,15 @@ Public Class AddAccountViewModel
         End Get
         Set(value As ArrayList)
             m_genders = value
+        End Set
+    End Property
+
+    Public Property AccountTypes As ArrayList
+        Get
+            Return m_accountTypes
+        End Get
+        Set(value As ArrayList)
+            m_accountTypes = value
         End Set
     End Property
 

@@ -1,5 +1,6 @@
 ﻿Public Class User
     Inherits Person
+    Implements ICloneable
     Private m_accountid As String = "2012-102622"
     Private m_position As String = "Admnistrator"
     Private m_password As String = "12345"
@@ -9,6 +10,7 @@
     Private m_answer2 As String = "a2"
     Private m_question3 As String = "q3"
     Private m_answer3 As String = "a3"
+    Private m_accountType As String = "Staff"
 
     Public Property AccountID As String
         Get
@@ -90,4 +92,34 @@
             m_answer3 = value
         End Set
     End Property
+
+    Public Property AccountType As String
+        Get
+            Return m_accountType
+        End Get
+        Set(value As String)
+            m_accountType = value
+        End Set
+    End Property
+
+    Public Function Clone() As Object Implements ICloneable.Clone
+        Dim user As New User
+        user.AccountID = AccountID
+        user.FamilyName = FamilyName
+        user.GivenName = GivenName
+        user.MiddleInitial = MiddleInitial
+        user.Birthdate = Birthdate
+        user.Address = Address
+        user.EmailAddress = EmailAddress
+        user.ContactNo = ContactNo
+        user.Question1 = Question1
+        user.Question2 = Question2
+        user.Question3 = Question3
+        user.Answer1 = Answer1
+        user.Answer2 = Answer2
+        user.Answer3 = Answer3
+        user.Image = Image
+        user.Password = Password
+        Return user
+    End Function
 End Class

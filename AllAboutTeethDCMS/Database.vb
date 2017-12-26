@@ -51,8 +51,9 @@ Public Class Database
 
     Private Sub startInsertProcess()
         Dim insertCommand As MySqlCommand = Connection.CreateCommand
-        insertCommand.CommandText = "INSERT INTO allaboutteeth_users VALUES (NULL, @id, @fname, @lname, @mi, @address, @email, @contact, @password, @gender, @image, @q1, @q2, @q3, @a1, @a2, @a3, @bday, NOW(), NOW(), @current);"
+        insertCommand.CommandText = "INSERT INTO allaboutteeth_users VALUES (NULL, @id, @type, @fname, @lname, @mi, @address, @email, @contact, @password, @gender, @image, @q1, @q2, @q3, @a1, @a2, @a3, @bday, NOW(), NOW(), @current);"
         insertCommand.Parameters.AddWithValue("@id", AddUserAccountViewModel.User.AccountID)
+        insertCommand.Parameters.AddWithValue("@type", AddUserAccountViewModel.User.AccountType)
         insertCommand.Parameters.AddWithValue("@fname", AddUserAccountViewModel.User.GivenName)
         insertCommand.Parameters.AddWithValue("@lname", AddUserAccountViewModel.User.FamilyName)
         insertCommand.Parameters.AddWithValue("@mi", AddUserAccountViewModel.User.MiddleInitial)

@@ -44,6 +44,9 @@
                 <DatePicker SelectedDate="{Binding Birthdate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="200" Style="{StaticResource DatePicker}" local:CustomProperties.Label="Birthday" Margin="10"/>
                 <TextBox Text="{Binding ContactNo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Contact no." Margin="10"/>
             </StackPanel>
+            <StackPanel>
+                <ComboBox Width="200" ItemsSource="{Binding AccountTypes}" SelectedItem="{Binding AccountType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource ComboBox}" local:CustomProperties.Label="User Type" Margin="10" SelectedIndex="0"/>
+            </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBox Text="{Binding Address, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="420" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Address" Margin="10"/>
                 <TextBox Text="{Binding EmailAddress, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Email Address" Margin="10"/>
