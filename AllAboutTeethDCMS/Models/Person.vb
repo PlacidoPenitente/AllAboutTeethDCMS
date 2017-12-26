@@ -2,7 +2,7 @@
     Private m_familyname As String = "Estrera"
     Private m_givenname As String = "Jay Mark"
     Private m_middleinitial As String = "P"
-    Private m_gender As String = "Male"
+    Private m_gender As String = "Female"
     Private m_birthdate As Date = Date.Now
     Private m_contactno As String = "09568032571"
     Private m_address As String = "Taytay, Rizal"

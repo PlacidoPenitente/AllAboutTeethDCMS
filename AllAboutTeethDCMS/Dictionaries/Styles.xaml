@@ -186,9 +186,9 @@
                         <Label Foreground="{TemplateBinding BorderBrush}" HorizontalAlignment="Center" FontWeight="Bold" Content="{TemplateBinding local:CustomProperties.Label}" FontFamily="{TemplateBinding FontFamily}" FontSize="12"/>
                     </StackPanel>
                     <ControlTemplate.Triggers>
-                        <Trigger Property="IsFocused" Value="True">
+                        <!--<Trigger Property="IsFocused" Value="True">
                             <Setter Property="IsOpen" Value="True" TargetName="popup"/>
-                        </Trigger>
+                        </Trigger>-->
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>

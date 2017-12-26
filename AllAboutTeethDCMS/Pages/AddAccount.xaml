@@ -35,7 +35,7 @@
                 </Border>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBox Text="{Binding AccountID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Account No." Margin="10" IsReadOnly="True"/>
+                <TextBox Text="{Binding AccountID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Account No." Margin="10"/>
                 <PasswordBox x:Name="password" Width="200" PasswordChanged="PasswordBox_PasswordChanged" Style="{StaticResource PassBoxStyle}" local:CustomProperties.Label="Password" Margin="10" local:CustomProperties.Hint="Paswword:"/>
                 <PasswordBox x:Name="confirm" Width="200" PasswordChanged="PasswordBox_PasswordChanged_1" Style="{StaticResource PassBoxStyle}" local:CustomProperties.Label="Confirm Password" Margin="10"/>
             </StackPanel>

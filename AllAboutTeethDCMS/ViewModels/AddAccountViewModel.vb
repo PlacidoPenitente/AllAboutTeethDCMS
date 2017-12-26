@@ -13,10 +13,13 @@ Public Class AddAccountViewModel
     End Sub
 
     Public Sub New()
+        m_user = New User()
+        CurrentUser = New User()
         m_databaseConnection = New Database(Me)
     End Sub
 
-    Private m_user As New User
+    Private m_user As User
+    Private m_currentUser As User
 
     Public Property FamilyName As String
         Get
@@ -203,6 +206,15 @@ Public Class AddAccountViewModel
         End Get
         Set(value As User)
             m_user = value
+        End Set
+    End Property
+
+    Public Property CurrentUser As User
+        Get
+            Return m_currentUser
+        End Get
+        Set(value As User)
+            m_currentUser = value
         End Set
     End Property
 
