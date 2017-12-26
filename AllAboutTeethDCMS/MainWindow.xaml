@@ -56,7 +56,7 @@
             </Grid>
         </Grid>
         <ScrollViewer x:Name="scrollviewer" Grid.Row="2" VerticalScrollBarVisibility="Hidden">
-            <local:AddAccount Margin="0,50,0,0"/>
+            <local:ViewUsers Margin="0,50,0,0"/>
         </ScrollViewer>
         <StackPanel Grid.Row="2" IsHitTestVisible="False">
             <StackPanel Background="{StaticResource DarkerBlue}" Height="50" Orientation="Horizontal">
