@@ -90,6 +90,7 @@
       <DependentUpon>SettingsRibbon.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\AddAccountViewModel.vb" />
+    <Compile Include="ViewModels\ViewUsersViewModel.vb" />
     <Page Include="Dictionaries\Colors.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
