@@ -33,4 +33,9 @@
         open.ShowDialog()
         Return open.FileName.Replace("\\", "/")
     End Function
+
+    Private Sub Button_Click_1(sender As Object, e As RoutedEventArgs)
+        Dim addAccountViewModel As AddAccountViewModel = DataContext
+        addAccountViewModel.insertUser()
+    End Sub
 End Class

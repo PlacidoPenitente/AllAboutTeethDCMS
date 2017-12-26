@@ -1,183 +1,212 @@
 ﻿Imports System.ComponentModel
+Imports AllAboutTeethDCMS
 
 Public Class AddAccountViewModel
     Implements INotifyPropertyChanged
 
     Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
 
+    Private m_databaseConnection As Database
+
     Public Sub OnPropertyChanged(propertyName As String)
         RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
     End Sub
 
-    Private user As New User
+    Public Sub New()
+        m_databaseConnection = New Database(Me)
+    End Sub
+
+    Private m_user As New User
 
     Public Property FamilyName As String
         Get
-            Return user.FamilyName
+            Return User.FamilyName
         End Get
         Set(value As String)
-            user.FamilyName = value
+            User.FamilyName = value
             OnPropertyChanged("FamilyName")
         End Set
     End Property
 
     Public Property GivenName As String
         Get
-            Return user.GivenName
+            Return User.GivenName
         End Get
         Set(value As String)
-            user.GivenName = value
+            User.GivenName = value
             OnPropertyChanged("GivenName")
         End Set
     End Property
 
     Public Property MiddleInitial As String
         Get
-            Return user.MiddleInitial
+            Return User.MiddleInitial
         End Get
         Set(value As String)
-            user.MiddleInitial = value
+            User.MiddleInitial = value
             OnPropertyChanged("MiddleInitial")
         End Set
     End Property
 
     Public Property Birthdate As Date
         Get
-            Return user.Birthdate
+            Return User.Birthdate
         End Get
         Set(value As Date)
-            user.Birthdate = value
+            User.Birthdate = value
             OnPropertyChanged("Birthdate")
         End Set
     End Property
 
     Public Property AccountID As String
         Get
-            Return user.AccountID
+            Return User.AccountID
         End Get
         Set(value As String)
-            user.AccountID = value
+            User.AccountID = value
             OnPropertyChanged("AccountID")
         End Set
     End Property
 
     Public Property Password As String
         Get
-            Return user.Password
+            Return User.Password
         End Get
         Set(value As String)
-            user.Password = value
+            User.Password = value
             OnPropertyChanged("Password")
         End Set
     End Property
 
     Public Property Gender As String
         Get
-            Return user.Gender
+            Return User.Gender
         End Get
         Set(value As String)
-            user.Gender = value
+            User.Gender = value
             OnPropertyChanged("Gender")
         End Set
     End Property
 
     Public Property ContactNo As String
         Get
-            Return user.ContactNo
+            Return User.ContactNo
         End Get
         Set(value As String)
-            user.ContactNo = value
+            User.ContactNo = value
             OnPropertyChanged("ContactNo")
         End Set
     End Property
 
     Public Property Address As String
         Get
-            Return user.Address
+            Return User.Address
         End Get
         Set(value As String)
-            user.Address = value
+            User.Address = value
             OnPropertyChanged("Address")
         End Set
     End Property
 
     Public Property EmailAddress As String
         Get
-            Return user.EmailAddress
+            Return User.EmailAddress
         End Get
         Set(value As String)
-            user.EmailAddress = value
+            User.EmailAddress = value
             OnPropertyChanged("EmailAddress")
         End Set
     End Property
 
     Public Property Image As String
         Get
-            Return user.Image
+            Return User.Image
         End Get
         Set(value As String)
-            user.Image = value
+            User.Image = value
             OnPropertyChanged("Image")
         End Set
     End Property
 
     Public Property Question1 As String
         Get
-            Return user.Question1
+            Return User.Question1
         End Get
         Set(value As String)
-            user.Question1 = value
+            User.Question1 = value
             OnPropertyChanged("Question1")
         End Set
     End Property
 
     Public Property Question2 As String
         Get
-            Return user.Question2
+            Return User.Question2
         End Get
         Set(value As String)
-            user.Question2 = value
+            User.Question2 = value
             OnPropertyChanged("Question2")
         End Set
     End Property
 
     Public Property Question3 As String
         Get
-            Return user.Question3
+            Return User.Question3
         End Get
         Set(value As String)
-            user.Question3 = value
+            User.Question3 = value
             OnPropertyChanged("Question3")
         End Set
     End Property
 
     Public Property Answer1 As String
         Get
-            Return user.Answer1
+            Return User.Answer1
         End Get
         Set(value As String)
-            user.Answer1 = value
+            User.Answer1 = value
             OnPropertyChanged("Answer1")
         End Set
     End Property
 
     Public Property Answer2 As String
         Get
-            Return user.Answer2
+            Return User.Answer2
         End Get
         Set(value As String)
-            user.Answer2 = value
+            User.Answer2 = value
             OnPropertyChanged("Answer2")
         End Set
     End Property
 
     Public Property Answer3 As String
         Get
-            Return user.Answer3
+            Return User.Answer3
         End Get
         Set(value As String)
-            user.Answer3 = value
+            User.Answer3 = value
             OnPropertyChanged("Answer3")
         End Set
     End Property
+
+    Public Property DatabaseConnection As Database
+        Get
+            Return m_databaseConnection
+        End Get
+        Set(value As Database)
+            m_databaseConnection = value
+        End Set
+    End Property
+
+    Public Property User As User
+        Get
+            Return m_user
+        End Get
+        Set(value As User)
+            m_user = value
+        End Set
+    End Property
+
+    Public Sub insertUser()
+        DatabaseConnection.insertUser()
+    End Sub
 End Class
