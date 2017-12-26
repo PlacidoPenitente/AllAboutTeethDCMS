@@ -25,8 +25,8 @@ Public Class Database
         End Set
     End Property
 
-    Public Sub New(x As AddAccountViewModel)
-        m_addUserAccountViewModel = x
+    Public Sub New(viewModel As AddAccountViewModel)
+        m_addUserAccountViewModel = viewModel
         createConnection()
     End Sub
 
@@ -50,28 +50,55 @@ Public Class Database
     End Sub
 
     Private Sub startInsertProcess()
-        Dim insertCommand As MySqlCommand = Connection.CreateCommand
-        insertCommand.CommandText = "INSERT INTO allaboutteeth_users VALUES (NULL, @id, @type, @fname, @lname, @mi, @address, @email, @contact, @password, @gender, @image, @q1, @q2, @q3, @a1, @a2, @a3, @bday, NOW(), NOW(), @current);"
-        insertCommand.Parameters.AddWithValue("@id", AddUserAccountViewModel.User.AccountID)
-        insertCommand.Parameters.AddWithValue("@type", AddUserAccountViewModel.User.AccountType)
-        insertCommand.Parameters.AddWithValue("@fname", AddUserAccountViewModel.User.GivenName)
-        insertCommand.Parameters.AddWithValue("@lname", AddUserAccountViewModel.User.FamilyName)
-        insertCommand.Parameters.AddWithValue("@mi", AddUserAccountViewModel.User.MiddleInitial)
-        insertCommand.Parameters.AddWithValue("@address", AddUserAccountViewModel.User.Address)
-        insertCommand.Parameters.AddWithValue("@email", AddUserAccountViewModel.User.EmailAddress)
-        insertCommand.Parameters.AddWithValue("@contact", AddUserAccountViewModel.User.ContactNo)
-        insertCommand.Parameters.AddWithValue("@password", AddUserAccountViewModel.User.Password)
-        insertCommand.Parameters.AddWithValue("@gender", AddUserAccountViewModel.User.Gender)
-        insertCommand.Parameters.AddWithValue("@image", AddUserAccountViewModel.User.Image)
-        insertCommand.Parameters.AddWithValue("@q1", AddUserAccountViewModel.User.Question1)
-        insertCommand.Parameters.AddWithValue("@q2", AddUserAccountViewModel.User.Question2)
-        insertCommand.Parameters.AddWithValue("@q3", AddUserAccountViewModel.User.Question3)
-        insertCommand.Parameters.AddWithValue("@a1", AddUserAccountViewModel.User.Answer1)
-        insertCommand.Parameters.AddWithValue("@a2", AddUserAccountViewModel.User.Answer2)
-        insertCommand.Parameters.AddWithValue("@a3", AddUserAccountViewModel.User.Answer3)
-        insertCommand.Parameters.AddWithValue("@bday", AddUserAccountViewModel.User.Birthdate)
-        insertCommand.Parameters.AddWithValue("@current", AddUserAccountViewModel.CurrentUser.AccountID)
-        insertCommand.Prepare()
-        insertCommand.ExecuteNonQuery()
+        Try
+            Dim insertCommand As MySqlCommand = Connection.CreateCommand
+            insertCommand.CommandText = "INSERT INTO allaboutteeth_users VALUES (NULL, @id, @type, @fname, @lname, @mi, @address, @email, @contact, @password, @gender, @image, @q1, @q2, @q3, @a1, @a2, @a3, @bday, NOW(), NOW(), @current);"
+            insertCommand.Parameters.AddWithValue("@id", AddUserAccountViewModel.User.AccountID)
+            insertCommand.Parameters.AddWithValue("@type", AddUserAccountViewModel.User.AccountType)
+            insertCommand.Parameters.AddWithValue("@fname", AddUserAccountViewModel.User.GivenName)
+            insertCommand.Parameters.AddWithValue("@lname", AddUserAccountViewModel.User.FamilyName)
+            insertCommand.Parameters.AddWithValue("@mi", AddUserAccountViewModel.User.MiddleInitial)
+            insertCommand.Parameters.AddWithValue("@address", AddUserAccountViewModel.User.Address)
+            insertCommand.Parameters.AddWithValue("@email", AddUserAccountViewModel.User.EmailAddress)
+            insertCommand.Parameters.AddWithValue("@contact", AddUserAccountViewModel.User.ContactNo)
+            insertCommand.Parameters.AddWithValue("@password", AddUserAccountViewModel.User.Password)
+            insertCommand.Parameters.AddWithValue("@gender", AddUserAccountViewModel.User.Gender)
+            insertCommand.Parameters.AddWithValue("@image", AddUserAccountViewModel.User.Image)
+            insertCommand.Parameters.AddWithValue("@q1", AddUserAccountViewModel.User.Question1)
+            insertCommand.Parameters.AddWithValue("@q2", AddUserAccountViewModel.User.Question2)
+            insertCommand.Parameters.AddWithValue("@q3", AddUserAccountViewModel.User.Question3)
+            insertCommand.Parameters.AddWithValue("@a1", AddUserAccountViewModel.User.Answer1)
+            insertCommand.Parameters.AddWithValue("@a2", AddUserAccountViewModel.User.Answer2)
+            insertCommand.Parameters.AddWithValue("@a3", AddUserAccountViewModel.User.Answer3)
+            insertCommand.Parameters.AddWithValue("@bday", AddUserAccountViewModel.User.Birthdate)
+            insertCommand.Parameters.AddWithValue("@current", AddUserAccountViewModel.CurrentUser.AccountID)
+            insertCommand.Prepare()
+            insertCommand.ExecuteNonQuery()
+        Catch ex As Exception
+            Dim insertCommand As MySqlCommand = Connection.CreateCommand
+            insertCommand.CommandText = "UPDATE allaboutteeth_users SET user_id=@id, user_type=@type, user_fname=@fname, user_lname=@lname, user_mi=@mi, user_address=@address, user_email=@email, user_contact=@contact, user_password=@password, user_gender=@gender, user_image=@image, user_q1=@q1, user_q2=@q2, user_q3=@q3, user_a1=@a1, user_a2=@a2, user_a3=@a3, user_editedby=@current WHERE user_id=@original"
+            insertCommand.Parameters.AddWithValue("@id", AddUserAccountViewModel.User.AccountID)
+            insertCommand.Parameters.AddWithValue("@type", AddUserAccountViewModel.User.AccountType)
+            insertCommand.Parameters.AddWithValue("@fname", AddUserAccountViewModel.User.GivenName)
+            insertCommand.Parameters.AddWithValue("@lname", AddUserAccountViewModel.User.FamilyName)
+            insertCommand.Parameters.AddWithValue("@mi", AddUserAccountViewModel.User.MiddleInitial)
+            insertCommand.Parameters.AddWithValue("@address", AddUserAccountViewModel.User.Address)
+            insertCommand.Parameters.AddWithValue("@email", AddUserAccountViewModel.User.EmailAddress)
+            insertCommand.Parameters.AddWithValue("@contact", AddUserAccountViewModel.User.ContactNo)
+            insertCommand.Parameters.AddWithValue("@password", AddUserAccountViewModel.User.Password)
+            insertCommand.Parameters.AddWithValue("@gender", AddUserAccountViewModel.User.Gender)
+            insertCommand.Parameters.AddWithValue("@image", AddUserAccountViewModel.User.Image)
+            insertCommand.Parameters.AddWithValue("@q1", AddUserAccountViewModel.User.Question1)
+            insertCommand.Parameters.AddWithValue("@q2", AddUserAccountViewModel.User.Question2)
+            insertCommand.Parameters.AddWithValue("@q3", AddUserAccountViewModel.User.Question3)
+            insertCommand.Parameters.AddWithValue("@a1", AddUserAccountViewModel.User.Answer1)
+            insertCommand.Parameters.AddWithValue("@a2", AddUserAccountViewModel.User.Answer2)
+            insertCommand.Parameters.AddWithValue("@a3", AddUserAccountViewModel.User.Answer3)
+            insertCommand.Parameters.AddWithValue("@bday", AddUserAccountViewModel.User.Birthdate)
+            insertCommand.Parameters.AddWithValue("@current", AddUserAccountViewModel.CurrentUser.AccountID)
+            insertCommand.Parameters.AddWithValue("@original", AddUserAccountViewModel.UserCopy.AccountID)
+            insertCommand.Prepare()
+            insertCommand.ExecuteNonQuery()
+        End Try
     End Sub
 End Class

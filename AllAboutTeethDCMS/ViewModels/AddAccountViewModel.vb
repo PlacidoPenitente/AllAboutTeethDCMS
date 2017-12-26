@@ -10,6 +10,7 @@ Public Class AddAccountViewModel
     Private m_currentUser As User
     Private m_genders As ArrayList
     Private m_accountTypes As ArrayList
+    Private m_userCopy As User
 
     Public Sub New()
         m_user = New User()
@@ -21,6 +22,7 @@ Public Class AddAccountViewModel
         m_accountTypes = New ArrayList()
         m_accountTypes.Add("Dentist")
         m_accountTypes.Add("Staff")
+        m_userCopy = m_user.Clone()
     End Sub
 
     Public Sub OnPropertyChanged(propertyName As String)
@@ -249,6 +251,15 @@ Public Class AddAccountViewModel
         End Get
         Set(value As ArrayList)
             m_accountTypes = value
+        End Set
+    End Property
+
+    Public Property UserCopy As User
+        Get
+            Return m_userCopy
+        End Get
+        Set(value As User)
+            m_userCopy = value
         End Set
     End Property
 
