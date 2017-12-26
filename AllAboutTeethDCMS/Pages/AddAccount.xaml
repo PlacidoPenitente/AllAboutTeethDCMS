@@ -40,10 +40,7 @@
                 <PasswordBox x:Name="confirm" Width="200" PasswordChanged="PasswordBox_PasswordChanged_1" Style="{StaticResource PassBoxStyle}" local:CustomProperties.Label="Confirm Password" Margin="10"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <ComboBox Width="200" SelectedItem="{Binding Gender, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource ComboBox}" local:CustomProperties.Label="Gender" Margin="10" SelectedIndex="0">
-                    <ComboBoxItem Content="Male"/>
-                    <ComboBoxItem Content="Female"/>
-                </ComboBox>
+                <ComboBox Width="200" ItemsSource="{Binding Genders}" SelectedItem="{Binding Gender, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource ComboBox}" local:CustomProperties.Label="Gender" Margin="10" SelectedIndex="0"/>
                 <DatePicker SelectedDate="{Binding Birthdate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="200" Style="{StaticResource DatePicker}" local:CustomProperties.Label="Birthday" Margin="10"/>
                 <TextBox Text="{Binding ContactNo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="200" Style="{StaticResource TextBoxStyle}" local:CustomProperties.Label="Contact no." Margin="10"/>
             </StackPanel>

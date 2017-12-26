@@ -12,10 +12,15 @@ Public Class AddAccountViewModel
         RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
     End Sub
 
+    Private m_genders As ArrayList
+
     Public Sub New()
         m_user = New User()
         CurrentUser = New User()
         m_databaseConnection = New Database(Me)
+        m_genders = New ArrayList()
+        m_genders.Add("Male")
+        m_genders.Add("Female")
     End Sub
 
     Private m_user As User
@@ -215,6 +220,15 @@ Public Class AddAccountViewModel
         End Get
         Set(value As User)
             m_currentUser = value
+        End Set
+    End Property
+
+    Public Property Genders As ArrayList
+        Get
+            Return m_genders
+        End Get
+        Set(value As ArrayList)
+            m_genders = value
         End Set
     End Property
 
