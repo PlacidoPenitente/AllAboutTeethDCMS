@@ -73,6 +73,12 @@ Public Class Database
             Dim user As New User
             user.AccountID = usersReader.GetString("user_id")
             user.Image = usersReader.GetString("user_image")
+            user.FamilyName = usersReader.GetString("user_lname")
+            user.GivenName = usersReader.GetString("user_fname")
+            user.MiddleInitial = usersReader.GetString("user_mi")
+            user.Address = usersReader.GetString("user_address")
+            user.EmailAddress = usersReader.GetString("user_email")
+            user.ContactNo = usersReader.GetString("user_contact")
             ViewUsersViewModel.Users.Add(user)
         End While
         usersReader.Close()
