@@ -23,6 +23,16 @@ Public Class ViewUsersViewModel
         Next
     End Sub
 
+    Public Sub addUsersList()
+        Container.Children.Clear()
+        For i = 0 To Users.Count - 1
+            Dim userView As New UserViewList
+            userView.DataContext = New UserViewViewModel
+            TryCast(userView.DataContext, UserViewViewModel).User = Users(i)
+            Container.Children.Add(userView)
+        Next
+    End Sub
+
     Public Sub loadUsers()
         Users.Clear()
         Database.getUsers()

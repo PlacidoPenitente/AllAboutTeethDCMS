@@ -27,7 +27,7 @@ Public Class UserViewViewModel
 
     Public Property FamilyName As String
         Get
-            Return User.FamilyName
+            Return User.FamilyName.ToUpper() + " , "
         End Get
         Set(value As String)
             User.FamilyName = value

@@ -3,11 +3,13 @@
 Public Class ViewUsers
     Private m_grid As WrapPanel
     Private m_list As StackPanel
+    Private m_scroller As ScrollViewer
 
     Public Sub New()
         InitializeComponent()
         m_grid = New WrapPanel
         m_list = New StackPanel
+        m_scroller = New ScrollViewer
         Dim vm As ViewUsersViewModel = DataContext
         vm.loadUsers()
         loadGrid()
@@ -27,7 +29,7 @@ Public Class ViewUsers
         container.Children.Add(List)
         Dim vm As ViewUsersViewModel = DataContext
         vm.Container = List
-        vm.addUsers()
+        vm.addUsersList()
         vm.loadUsers()
     End Sub
 
@@ -46,6 +48,15 @@ Public Class ViewUsers
         End Get
         Set(value As StackPanel)
             m_list = value
+        End Set
+    End Property
+
+    Public Property Scroller As ScrollViewer
+        Get
+            Return m_scroller
+        End Get
+        Set(value As ScrollViewer)
+            m_scroller = value
         End Set
     End Property
 

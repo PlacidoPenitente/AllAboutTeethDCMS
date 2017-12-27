@@ -75,6 +75,9 @@
     <Compile Include="Controls\UserView.xaml.vb">
       <DependentUpon>UserView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UserViewList.xaml.vb">
+      <DependentUpon>UserViewList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Converters\Base64ToImage.vb" />
     <Compile Include="Database.vb" />
     <Compile Include="Models\Patient.vb" />
@@ -97,6 +100,10 @@
     <Compile Include="ViewModels\UserViewViewModel.vb" />
     <Compile Include="ViewModels\ViewUsersViewModel.vb" />
     <Page Include="Controls\UserView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\UserViewList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

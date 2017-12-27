@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:AllAboutTeethDCMS"
              mc:Ignorable="d" 
              d:DesignHeight="200" d:DesignWidth="200">
-    <Border BorderThickness="1" BorderBrush="{StaticResource DarkBlue}" Margin="5" SnapsToDevicePixels="True" Height="200" Width="200">
+    <Border BorderThickness="1" BorderBrush="{StaticResource DarkerBlue}" Margin="5" SnapsToDevicePixels="True" Height="200" Width="200">
         <StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="ID: "/>
