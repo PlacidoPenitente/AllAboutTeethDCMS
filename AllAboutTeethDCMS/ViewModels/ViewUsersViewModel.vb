@@ -4,7 +4,7 @@ Imports AllAboutTeethDCMS
 Public Class ViewUsersViewModel
     Implements INotifyPropertyChanged
 
-    Private m_container As WrapPanel
+    Private m_container As Panel
     Private m_database As Database
     Private m_users As ArrayList
 
@@ -17,6 +17,7 @@ Public Class ViewUsersViewModel
         Container.Children.Clear()
         For i = 0 To Users.Count - 1
             Dim userView As New UserView
+            userView.DataContext = New UserViewViewModel
             TryCast(userView.DataContext, UserViewViewModel).User = Users(i)
             Container.Children.Add(userView)
         Next
@@ -27,13 +28,12 @@ Public Class ViewUsersViewModel
         Database.getUsers()
     End Sub
 
-    Public Property Container As WrapPanel
+    Public Property Container As Panel
         Get
             Return m_container
         End Get
-        Set(value As WrapPanel)
+        Set(value As Panel)
             m_container = value
-            loadUsers()
         End Set
     End Property
 

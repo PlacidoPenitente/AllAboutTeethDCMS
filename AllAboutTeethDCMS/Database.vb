@@ -71,6 +71,7 @@ Public Class Database
         Dim usersReader As MySqlDataReader = getCommand.ExecuteReader()
         While usersReader.Read()
             Dim user As New User
+            user.AccountID = usersReader.GetString("user_id")
             ViewUsersViewModel.Users.Add(user)
         End While
         usersReader.Close()

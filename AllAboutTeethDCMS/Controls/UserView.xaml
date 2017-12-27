@@ -6,14 +6,11 @@
              xmlns:local="clr-namespace:AllAboutTeethDCMS"
              mc:Ignorable="d" 
              d:DesignHeight="200" d:DesignWidth="200">
-    <UserControl.DataContext>
-        <local:UserViewViewModel/>
-    </UserControl.DataContext>
     <Border BorderThickness="1" BorderBrush="{StaticResource DarkBlue}" Margin="5" SnapsToDevicePixels="True">
         <StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Label Content="Account ID: "/>
-                <Label Content="Account ID: "/>
+                <Label Content="ID: "/>
+                <Label Content="{Binding AccountID}"/>
             </StackPanel>
             <StackPanel Height="75">
                 <Image/>
