@@ -226,7 +226,10 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\Images\GridView_24px.png" />
+    <Resource Include="Resources\Images\List_24px.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Images\JoiningQueue_48px.png" />
   </ItemGroup>

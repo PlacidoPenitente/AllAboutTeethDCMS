@@ -55,4 +55,6 @@
     <ImageSource x:Key="Tutorial">/Resources/Images/Classroom_48px.png</ImageSource>
     <ImageSource x:Key="Keyboard">/Resources/Images/Keyboard_48px.png</ImageSource>
     <ImageSource x:Key="About">/Resources/Images/Info_48px.png</ImageSource>
+    <ImageSource x:Key="GridView">/Resources/Images/GridView_24px.png</ImageSource>
+    <ImageSource x:Key="ListView">/Resources/Images/List_24px.png</ImageSource>
 </ResourceDictionary>

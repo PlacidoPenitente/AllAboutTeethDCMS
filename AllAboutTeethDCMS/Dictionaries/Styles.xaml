@@ -5,6 +5,7 @@
     <Style x:Key="MenuButton" TargetType="{x:Type RadioButton}">
         <Setter Property="FontFamily" Value="Century Gothic"/>
         <Setter Property="FontSize" Value="12"/>
+        
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="Background" Value="{StaticResource LighterBlue}"/>
         <Setter Property="local:CustomProperties.Visibility" Value="Collapsed"/>
@@ -416,6 +417,27 @@
                         <Trigger Property="IsFocused" Value="True" SourceName="PART_Button">
                             <Setter Property="BorderBrush" Value="{StaticResource Blue}" TargetName="border"/>
                             <Setter Property="Foreground" Value="{StaticResource Blue}" TargetName="label"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="RadioButtonStyle1" TargetType="{x:Type RadioButton}">
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="#FF8E8F8F"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border BorderBrush="{TemplateBinding Background}" BorderThickness="1" HorizontalAlignment="Center" SnapsToDevicePixels="True">
+                        <Image Source="{TemplateBinding local:CustomProperties.Image}" Height="24" Margin="4,4,4,4"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Background" Value="{StaticResource Blue}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
