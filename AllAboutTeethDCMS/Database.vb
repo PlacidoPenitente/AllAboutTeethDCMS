@@ -72,6 +72,7 @@ Public Class Database
         While usersReader.Read()
             Dim user As New User
             user.AccountID = usersReader.GetString("user_id")
+            user.Image = usersReader.GetString("user_image")
             ViewUsersViewModel.Users.Add(user)
         End While
         usersReader.Close()
