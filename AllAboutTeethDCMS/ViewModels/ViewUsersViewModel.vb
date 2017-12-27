@@ -6,15 +6,25 @@ Public Class ViewUsersViewModel
 
     Private m_container As WrapPanel
     Private m_database As Database
+    Private m_users As ArrayList
 
     Public Sub New()
         m_database = New Database(Me)
+        Users = New ArrayList
+    End Sub
+
+    Public Sub addUsers()
+        Container.Children.Clear()
+        For i = 0 To Users.Count - 1
+            Dim userView As New UserView
+            TryCast(userView.DataContext, UserViewViewModel).User = Users(i)
+            Container.Children.Add(userView)
+        Next
     End Sub
 
     Public Sub loadUsers()
-        For i = 0 To 100
-            Container.Children.Add(New UserView)
-        Next
+        Users.Clear()
+        Database.getUsers()
     End Sub
 
     Public Property Container As WrapPanel
@@ -33,6 +43,15 @@ Public Class ViewUsersViewModel
         End Get
         Set(value As Database)
             m_database = value
+        End Set
+    End Property
+
+    Public Property Users As ArrayList
+        Get
+            Return m_users
+        End Get
+        Set(value As ArrayList)
+            m_users = value
         End Set
     End Property
 

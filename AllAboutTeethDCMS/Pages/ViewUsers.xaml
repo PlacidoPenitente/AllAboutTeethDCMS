@@ -14,10 +14,19 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" Margin="5">
-            <RadioButton IsChecked="True" Content="Grid View" Style="{StaticResource RadioButtonStyle1}" local:CustomProperties.Image="{StaticResource GridView}"/>
-            <RadioButton Content="List View" Style="{StaticResource RadioButtonStyle1}" local:CustomProperties.Image="{StaticResource ListView}"/>
-        </StackPanel>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" Margin="5">
+                <RadioButton IsChecked="True" Content="Grid View" Style="{StaticResource RadioButtonStyle1}" local:CustomProperties.Image="{StaticResource GridView}"/>
+                <RadioButton Content="List View" Style="{StaticResource RadioButtonStyle1}" local:CustomProperties.Image="{StaticResource ListView}"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <Button Content="Reload" Click="Button_Click"/>
+            </StackPanel>
+        </Grid>
         <WrapPanel x:Name="container" Grid.Row="1"/>
     </Grid>
 </UserControl>

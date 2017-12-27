@@ -7,6 +7,7 @@ Public Class Database
     Private m_addUserAccountViewModel As AddAccountViewModel
     Private m_viewUsersViewModel As ViewUsersViewModel
     Private m_insertThread As Thread
+    Private m_getUsersThread As Thread
 
     Public Property AddUserAccountViewModel As AddAccountViewModel
         Get
@@ -49,6 +50,30 @@ Public Class Database
         Connection = New MySqlConnection()
         Connection.ConnectionString = "server=localhost; user=allaboutteeth; password=allaboutteeth; database=allaboutteeth_database"
         Connection.Open()
+    End Sub
+
+    Public Sub getUsers()
+        If IsNothing(m_getUsersThread) Then
+            m_getUsersThread = New Thread(AddressOf startGettingUserProcess)
+            m_getUsersThread.IsBackground = True
+            m_getUsersThread.Start()
+        End If
+        If Not m_getUsersThread.IsAlive Then
+            m_getUsersThread = New Thread(AddressOf startGettingUserProcess)
+            m_getUsersThread.IsBackground = True
+            m_getUsersThread.Start()
+        End If
+    End Sub
+
+    Private Sub startGettingUserProcess()
+        Dim getCommand As MySqlCommand = Connection.CreateCommand
+        getCommand.CommandText = "SELECT * FROM allaboutteeth_users"
+        Dim usersReader As MySqlDataReader = getCommand.ExecuteReader()
+        While usersReader.Read()
+            Dim user As New User
+            ViewUsersViewModel.Users.Add(user)
+        End While
+        usersReader.Close()
     End Sub
 
     Public Sub insertUser()
