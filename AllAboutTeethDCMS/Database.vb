@@ -5,6 +5,7 @@ Imports MySql.Data.MySqlClient
 Public Class Database
     Private m_connection As MySqlConnection
     Private m_addUserAccountViewModel As AddAccountViewModel
+    Private m_viewUsersViewModel As ViewUsersViewModel
     Private m_insertThread As Thread
 
     Public Property AddUserAccountViewModel As AddAccountViewModel
@@ -25,8 +26,22 @@ Public Class Database
         End Set
     End Property
 
+    Public Property ViewUsersViewModel As ViewUsersViewModel
+        Get
+            Return m_viewUsersViewModel
+        End Get
+        Set(value As ViewUsersViewModel)
+            m_viewUsersViewModel = value
+        End Set
+    End Property
+
     Public Sub New(viewModel As AddAccountViewModel)
         m_addUserAccountViewModel = viewModel
+        createConnection()
+    End Sub
+
+    Public Sub New(viewModel As ViewUsersViewModel)
+        m_viewUsersViewModel = viewModel
         createConnection()
     End Sub
 
