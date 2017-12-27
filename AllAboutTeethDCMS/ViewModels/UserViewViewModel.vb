@@ -57,7 +57,7 @@ Public Class UserViewViewModel
 
     Public Property Birthdate As Date
         Get
-            Return User.Birthdate
+            Return User.Birthdate.ToShortDateString()
         End Get
         Set(value As Date)
             User.Birthdate = value
